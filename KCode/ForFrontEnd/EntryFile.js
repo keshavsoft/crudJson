@@ -26,8 +26,8 @@ const StartFunc = () => {
     return sidebarItems;
 };
 
-let k1 = StartFunc();
+// let k1 = StartFunc();
 
-console.log("aaaaaaaaaaa : ", k1);
+// console.log("aaaaaaaaaaa : ", k1);
 
-// export { StartFunc }
+export { StartFunc }
