@@ -1,0 +1,12 @@
+{ "routePath": "bin", "tableName": "Openings" ,"tableConfig":{
+    "columns":[
+        {
+            "field":"AccountName",
+            "title":"AccountName"
+        },
+        {
+            "field":"Date",
+            "title":"Date"
+        }
+    ]
+}}

@@ -1,0 +1,31 @@
+{% if menuItem.controls.footerControls.footer == "left" %}
+<footer id="footer" class="footer">
+    <div class="copyright text-start m-1">
+        &copy;{{ menuItem.controls.footerControls.footerData if menuItem.controls.footerControls.footerData else " KeshavSoft @ 2024"}}<strong>
+    </div>
+
+</footer>
+{% elif menuItem.controls.footerControls.footer == "right" %}
+<footer id="footer" class="footer">
+    <div class="copyright text-end m-1">
+        &copy;{{ menuItem.controls.footerControls.footerData if menuItem.controls.footerControls.footerData else " KeshavSoft @ 2024"}}<strong>
+    </div>
+
+</footer>
+{% elif menuItem.controls.footerControls.footer == "center" %}
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; {{ menuItem.controls.footerControls.footerData if menuItem.controls.footerControls.footerData else " KeshavSoft @ 2024"}}<strong>
+    </div>
+
+</footer>
+{% elif menuItem.controls.footerControls.footer == "none" %}
+
+{% else %}
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; {{ menuItem.controls.footerControls.footerData if menuItem.controls.footerControls.footerData else " KeshavSoft @ 2024"}}<strong>
+    </div>
+
+</footer>
+{% endif %}
