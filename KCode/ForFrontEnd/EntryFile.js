@@ -11,13 +11,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const FrontEndSrcFolder = "src/FrontEnd";
-
+console.log("__dirname : ", __dirname);
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
 const StartFunc = () => {
     const LocalTableNames = StartFuncReadDataSchema();
 
-    const files = StartFuncGetHtmlFiles({ inRootFolder: root });
+    const files = StartFuncGetHtmlFiles({ inRootFolder: __dirname });
 
     let sidebarItems = StartFuncBuildSideBarJson({ inFilesArray: files, inTablesArray: LocalTableNames.children });
 
@@ -26,4 +26,8 @@ const StartFunc = () => {
     return sidebarItems;
 };
 
-export { StartFunc }
+let k1 = StartFunc();
+
+console.log("aaaaaaaaaaa : ", k1);
+
+// export { StartFunc }
