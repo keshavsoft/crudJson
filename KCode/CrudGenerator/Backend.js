@@ -6,7 +6,7 @@ let StartFunc = ({ inFilesArray }) => {
 
     StartFuncPrepareReadColumnsData({ inTableData: LocalFilesArray });
 
-    let CommonFrom = "src";
+    let CommonFrom = "src/BackEnd";
     let CommonTo = "bin";
 
     StartFuncForBackend({
