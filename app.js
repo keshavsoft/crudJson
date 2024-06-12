@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 app.use(express.json({ limit: '100mb' }));
 
-app.use('/', express.static(path.join(path.resolve(), 'public')));
+app.use('/', express.static(path.join(path.resolve(), 'publicDir')));
 
 app.get('/Version', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');

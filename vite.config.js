@@ -13,7 +13,7 @@ import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js"
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const FrontEndSrcFolder = "src/FrontEnd";
+const FrontEndSrcFolder = "publicSrc";
 const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
