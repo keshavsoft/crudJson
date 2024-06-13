@@ -6,9 +6,10 @@ const StartFunc = ({ inSideBarArray }) => {
 
     inSideBarArray.forEach(LoopTableName => {
         LoopTableName.children.forEach(LoopInsideFile => {
+            console.log("LoopInsideFile : ", LoopInsideFile);
             let LocalFileData = fs.readFileSync(LoopInsideFile.filePath, "utf8");
-            console.log("uuuuu:", `${destinationPath}/${LoopInsideFile.url}`);
-            fs.writeFileSync(`${destinationPath}/${LoopInsideFile.url}`, LocalFileData);
+            let LocalfileNameReplaced = LocalFileData.replace("{% set filename = '' %}", `{% set filename = '${LoopInsideFile.url}' %}`)
+            fs.writeFileSync(`${destinationPath}/${LoopInsideFile.url}`, LocalfileNameReplaced);
         });
     });
 

@@ -1,4 +1,4 @@
-import path, { resolve } from 'path'
+import path from 'path'
 import { fileURLToPath } from 'url';
 
 import { StartFunc as StartFuncReadDataSchema } from "../ReadDataSchema.js";
@@ -22,8 +22,4 @@ const StartFunc = () => {
     return sidebarItems;
 };
 
-// let k1 = StartFunc();
-
-// console.log("aaaaaaaaaaa : ", k1);
-
-export { StartFunc }
+export { StartFunc };

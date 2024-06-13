@@ -84,7 +84,6 @@ export default defineConfig((env) => ({
                         return str.indexOf(containStr) >= 0
                     },
                     startsWith: (str, targetStr) => {
-                        console.log(" kkkkkk , ", str, targetStr);
                         if (!str.length) return false
                         return str.startsWith(targetStr)
                     }

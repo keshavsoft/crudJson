@@ -2,13 +2,13 @@
     {% for result in sidebarItems %}
     {% if result.children.length > 0 %}
     <li class="nav-item">
-        <a class="nav-link {{ 'collapsed' if (result.url == filename or filename|startsWith(result.url)) else '' }}" href="#"
-            data-bs-target="#{{result.name}}" data-bs-toggle="collapse">
+        <a class="nav-link {{ '' if (result.url == filename or filename|startsWith(result.nameWithOutExtension)) else 'collapsed' }}" href="#"
+            data-bs-target="#{{result.nameWithOutExtension}}" data-bs-toggle="collapse">
             <i class="{{ result.icon }}"></i>
-            <span>{{ result.name }}</span><i class="bi bi-chevron-down ms-auto"></i>
+            <span>{{ result.nameWithOutExtension }}</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="{{result.name}}"
-            class="nav-content collapse {{ '' if (result.url == filename or filename|startsWith(result.url)) else 'show' }}"
+        <ul id="{{result.nameWithOutExtension}}"
+            class="nav-content collapse {{ 'show' if (result.url == filename or filename|startsWith(result.nameWithOutExtension)) else '' }}"
             data-bs-parent="#sidebar-nav">
             {% for sub in result.children %}
             <li>
