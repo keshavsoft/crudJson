@@ -10,7 +10,6 @@ import { StartFunc as StartFuncCopyHtmlFiles } from "./PrepareHtmlFiles/CopyHtml
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
 const StartFunc = () => {
     const LocalTableNames = StartFuncReadDataSchema();
 
