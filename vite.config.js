@@ -20,8 +20,6 @@ const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
 let sidebarItems = StartFuncGetSideBarArray();
 
-console.log("aaaaaaaaaaa : ", sidebarItems);
-
 const files = StartFuncGetFiles({ inRootFolder: root });
 
 // Modules and extensions

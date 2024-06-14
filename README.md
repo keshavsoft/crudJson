@@ -235,3 +235,8 @@ MongoDB
 errors can occur for mysql2 npm package for python
 sqlite3 npm also error can come
 
+for developers to enjoy this repo
+
+1. run KCode/Backend.js
+2. run KCode/Database.js
+3. npm run build (this will generate the frontend files from the json schema referred in KCode/Config.json : DataPk)
