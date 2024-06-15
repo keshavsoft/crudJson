@@ -1,6 +1,6 @@
 import { MongoClient, ObjectId } from "mongodb";
 import { startFunc as startFuncForPassword } from "../commonFuncs/forPassword.js";
-import { startFunc as startFuncForUrl } from "../commonFuncs/ForUrl.js";
+import { startFunc as startFuncForUrl } from "../commonFuncs/forUrl.js";
 // const { ObjectId } = require('mongodb');
 import  path  from "path";
 import configJson from '../../../Config.json' assert {type: 'json'};
