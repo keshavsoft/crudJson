@@ -2,7 +2,10 @@
   "AccountName": {
     "type": "STRING",
     "allowNull": false,
-    "unique": true
+    "unique": true,
+    "HtmlTags": {
+      "AutoFocusTag": "autofocus"
+    }
   },
   "BSGroup": {
     "type": "STRING",
@@ -12,9 +15,9 @@
     "type": "STRING",
     "allowNull": true
   },
-  "pk":{
-    "type":"INTEGER",
-    "primaryKey":true,
-    "autoIncrement":true
+  "pk": {
+    "type": "INTEGER",
+    "primaryKey": true,
+    "autoIncrement": true
   }
 }
