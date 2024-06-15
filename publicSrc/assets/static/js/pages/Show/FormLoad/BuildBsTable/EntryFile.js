@@ -11,22 +11,22 @@ const jFLocalInitialize = async () => {
 
     $table.bootstrapTable({
         data: [],
-        columns:jVarLocalData
+        columns: jVarLocalData
     });
 };
 
 const jFLocalReturnColumns = async () => {
     let jVarLocalData = await jFLocalTableSchema();
-    let jVarLocalColumns=Object.keys(jVarLocalData);
+    let jVarLocalColumns = Object.keys(jVarLocalData);
 
-  let jVarLocalCollection=  jVarLocalColumns.map(element => {
-        return{
-            field:element,
-            title:element
+    let jVarLocalCollection = jVarLocalColumns.map(element => {
+        return {
+            field: element,
+            title: element
         }
     });
 
- return   jVarLocalCollection;
+    return jVarLocalCollection;
 };
 
 const jFLocalTableSchema = async () => {

@@ -4,7 +4,9 @@
     "allowNull": false,
     "unique": true,
     "HtmlTags": {
-      "AutoFocusTag": "autofocus"
+      "Create": {
+        "AutoFocusTag": "autofocus"
+      }
     }
   },
   "BSGroup": {
