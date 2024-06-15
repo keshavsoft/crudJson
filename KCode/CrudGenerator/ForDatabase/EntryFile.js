@@ -1,5 +1,6 @@
 import { StartFunc as StartFuncForFlatJson } from "./ForFlatJson/EntryFile.js";
 import { StartFunc as StartFuncForSequelize } from "./sqlite/ForSequelize/CreateData.js";
+
 import ConfigJson from '../../Config.json' assert {type: 'json'};
 import fs from "fs";
 import path from "path";
@@ -30,7 +31,6 @@ let LocalFuncCreateFolder = () => {
     };
 };
 
-
 let LocalFuncCreateTableAsFolder = ({ inTablesCollection }) => {
     let LocalTablesCollection = inTablesCollection;
     // console.log("inTablesCollection : ", LocalTablesCollection);
@@ -42,8 +42,6 @@ let LocalFuncCreateTableAsFolder = ({ inTablesCollection }) => {
     try {
         LocalTablesCollection.children.forEach(element => {
             let LoopInsidePath = `${ConfigJson.ToDataDetails.DataPath}/${ConfigJson.ToDataDetails.DataPk}/${path.parse(element.name).name}`;
-            console.log("LoopInsidePath : ", LoopInsidePath);
-
 
             if (fs.existsSync(LoopInsidePath) === false) {
                 fs.mkdirSync(LoopInsidePath, { recursive: true });

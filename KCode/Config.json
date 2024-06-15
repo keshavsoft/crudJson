@@ -1,5 +1,5 @@
 {
-    "isSequelize": false,
+    "isSequelize": true,
     "ToDataDetails": {
         "DataPk": 321,
         "DataPath": "KData/JSON",
