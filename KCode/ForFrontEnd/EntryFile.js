@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const StartFunc = () => {
     const LocalTableNames = StartFuncReadDataSchema();
-
+    // console.log("LocalTableNames: ", LocalTableNames);
     const files = StartFuncGetHtmlFiles({ inRootFolder: __dirname });
 
     let sidebarItems = StartFuncBuildSideBarJson({ inFilesArray: files, inTablesArray: LocalTableNames.children });

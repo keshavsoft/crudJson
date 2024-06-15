@@ -1,11 +1,8 @@
 {% set title = 'Account Profile' %}
-{% set tableName = 'Openings' %}
-{% set filename = '' %}
 
 {% extends 'src/FrontEnd/layouts/master.html' %}
 
 {% block content %}
-
 <div class="pagetitle">
     <h1>Form Elements</h1>
     <nav>
@@ -19,22 +16,29 @@
 
 <section class="section">
     <div class="row">
-        <div class="col-lg-6">
-
+        <div class="col">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">General Form Elements</h5>
 
                     <!-- General Form Elements -->
-                     <form>
+                    <form onsubmit="return false" id="FormId">
+                        {% for key, value in columnData %}
                         <div class="row mb-3">
-                            <label for="inputText" class="col-sm-2 col-form-label">Text</label>
+                            <label for="inputText" class="col-sm-2 col-form-label">{{key}}</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control">
+                                <input type="text" name="{{key}}" class="form-control">
                             </div>
                         </div>
-                     </form>
-                <!-- End General Form Elements -->
+                        {% endfor %}
+                        <div class="row mb-3">
+                            <div class="col-sm-10">
+                                <button id="SaveButtonId" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+                    <!-- End General Form Elements -->
 
                 </div>
             </div>
@@ -42,14 +46,8 @@
         </div>
     </div>
 </section>
+{% endblock %}
 
-<template>
-    <div class="row mb-3">
-        <label for="inputText" class="col-sm-2 col-form-label">Text</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control">
-        </div>
-    </div>
-</template>
-
+{% block js %}
+<script type="module" src="./assets/static/js/pages/Create/StartFunc.js"></script>
 {% endblock %}
