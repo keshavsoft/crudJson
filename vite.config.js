@@ -21,7 +21,7 @@ const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 let sidebarItems = StartFuncGetSideBarArray();
 
 const files = StartFuncGetFiles({ inRootFolder: root });
-
+console.log("files : ", sidebarItems);
 // Modules and extensions
 // If the value is true, then it will copy the files inside the `dist` folders
 // But if the value is false, it will copy the entire module files and folders
