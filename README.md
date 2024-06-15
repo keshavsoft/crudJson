@@ -240,3 +240,13 @@ for developers to enjoy this repo
 1. run KCode/Backend.js
 2. run KCode/Database.js
 3. npm run build (this will generate the frontend files from the json schema referred in KCode/Config.json : DataPk)
+
+16jun 2024 
+
+finished ui with nice admin
+
+https://github.com/hacktheme/Nice-Admin
+
+now trying to integrate mazer
+
+https://github.com/zuramai/mazer
