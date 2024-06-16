@@ -12,6 +12,5 @@
         "data-detail-formatter": "detailFormatter",
         "data-id-field": "pk",
         "data-show-toggle": "true"
-
     }
 }
