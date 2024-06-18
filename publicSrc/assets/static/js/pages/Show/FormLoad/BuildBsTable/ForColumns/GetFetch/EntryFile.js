@@ -1,6 +1,6 @@
 import ConfigJson from './url.json' with {type: 'json'};
 
-const StartFunc = async () => {
+const StartFunc1 = async () => {
     let jVarLocalData = await jFLocalTableSchema();
     let jVarLocalColumns = Object.keys(jVarLocalData);
 
@@ -14,8 +14,8 @@ const StartFunc = async () => {
     return jVarLocalCollection;
 };
 
-const jFLocalTableSchema = async () => {
-    let jVarLocalResponse = await fetch(`/DataSchema/321/${jVarGlobalTableName}.json`);
+const StartFunc = async () => {
+    let jVarLocalResponse = await fetch(`/${ConfigJson.GetUrl}/${jVarGlobalDataPk}/${jVarGlobalTableName}.json`);
     let jVarLocalData = await jVarLocalResponse.json();
 
     return await jVarLocalData;
