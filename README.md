@@ -250,3 +250,7 @@ https://github.com/hacktheme/Nice-Admin
 now trying to integrate mazer
 
 https://github.com/zuramai/mazer
+
+limitations
+
+1. never use - for any names

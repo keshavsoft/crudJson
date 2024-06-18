@@ -19,9 +19,13 @@ const FrontEndDistFolder = "publicDir/bin";
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
 let sidebarItems = StartFuncGetSideBarArray();
+// console.log("sidebarItems : ", sidebarItems);
 
 const files = StartFuncGetFiles({ inRootFolder: root });
-// console.log("files : ", sidebarItems);
+const CommonVariables = StartFuncGetVariables({ inFilesArray: files, inSidebarItems: sidebarItems });
+
+
+console.log("CommonVariables : ", CommonVariables);
 // Modules and extensions
 // If the value is true, then it will copy the files inside the `dist` folders
 // But if the value is false, it will copy the entire module files and folders

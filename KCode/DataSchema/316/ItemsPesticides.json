@@ -1,0 +1,7 @@
+  {
+    "PestItemName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    }
+  }

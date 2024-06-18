@@ -1,10 +1,10 @@
   {
-    "TechnicianName": {
+    "CustomerName": {
       "type": "STRING",
       "allowNull": false,
       "unique": true
     },
-    "Mobile": {
+    "CustomerMobile": {
       "type": "NUMBER",
       "unique": true,
       "allowNull": false
