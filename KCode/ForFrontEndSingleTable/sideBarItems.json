@@ -12,6 +12,11 @@
                 "name": "Simple",
                 "url": "CreateSimple.html",
                 "icon": "grid-fill"
+            },
+            {
+                "name": "CreateClientCheck",
+                "url": "CreateClientCheck.html",
+                "icon": "grid-fill"
             }
         ]
     },
