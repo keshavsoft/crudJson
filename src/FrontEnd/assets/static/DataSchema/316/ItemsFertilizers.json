@@ -1,0 +1,7 @@
+  {
+    "FertItemName": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true
+    }
+  }

@@ -1,5 +1,6 @@
 import fs from 'fs'
 import { resolve } from 'path'
+import { StartFunc as CopySchema } from "./CopySchema.js";
 
 const StartFunc = ({ inRootFolder }) => {
     const root = inRootFolder;
@@ -10,6 +11,8 @@ const StartFunc = ({ inRootFolder }) => {
         .forEach(filename => {
             files[filename.slice(0, -5)] = resolve(root, filename)
         });
+
+    CopySchema();
 
     return files;
 };

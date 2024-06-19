@@ -3,25 +3,43 @@ import path, { resolve } from 'path'
 import { fileURLToPath } from 'url';
 import nunjucks from 'vite-plugin-nunjucks';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import ConfigJson from './bin/Config.json' with {type: 'json'};
+
+import { StartFunc as StartFuncGetSideBarArray } from "./KCode/ForFrontEnd/EntryFile.js";
 
 import { StartFunc as StartFuncGetFiles } from "./viteFuncs/getFiles.js";
 
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js";
 
-import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SrcFolder = "src";
-
-const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/TableName`;
-const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
+const FrontEndSrcFolder = "publicSrc";
+const FrontEndDistFolder = "publicDir/bin";
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 
-let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
+let sidebarItems = StartFuncGetSideBarArray();
+// console.log("sidebarItems : ", sidebarItems);
+
+const files = StartFuncGetFiles({ inRootFolder: root });
+const CommonVariables = StartFuncGetVariables({ inFilesArray: files, inSidebarItems: sidebarItems });
+
+
+console.log("CommonVariables : ", CommonVariables);
+// Modules and extensions
+// If the value is true, then it will copy the files inside the `dist` folders
+// But if the value is false, it will copy the entire module files and folders
+const modulesToCopy = {
+}
+
+const copyModules = Object.keys(modulesToCopy).map(moduleName => {
+    const withDist = modulesToCopy[moduleName]
+    return {
+        src: normalizePath(resolve(__dirname, `./node_modules/${moduleName}${withDist ? '/dist' : ''}`)),
+        dest: 'assets/extensions',
+        rename: moduleName
+    }
+})
 
 build({
     configFile: false,
@@ -49,9 +67,10 @@ export default defineConfig((env) => ({
     plugins: [
         viteStaticCopy({
             targets: [
-                { src: normalizePath(resolve(__dirname, `./${SrcFolder}/FrontEnd/assets/static`)), dest: "../assets" },
+                { src: normalizePath(resolve(__dirname, `./${FrontEndSrcFolder}/assets/static`)), dest: 'assets' },
                 { src: normalizePath(resolve(__dirname, `./${FrontEndSrcFolder}/assets/compiled/fonts`)), dest: 'assets/compiled/css' },
-                { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' }
+                { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' },
+                ...copyModules
             ],
             watch: {
                 reloadPageOnChange: true
@@ -59,7 +78,7 @@ export default defineConfig((env) => ({
         }),
         nunjucks({
             templatesDir: root,
-            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inSidebarItems: sideBarItemsJson }),
+            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inSidebarItems: sidebarItems }),
             nunjucksEnvironment: {
                 filters: {
                     containString: (str, containStr) => {
@@ -87,7 +106,7 @@ export default defineConfig((env) => ({
         emptyOutDir: false,
         manifest: true,
         target: "chrome58",
-        outDir: resolve(__dirname, `${FrontEndDistFolder}/TableName`),
+        outDir: resolve(__dirname, `${FrontEndDistFolder}`),
         rollupOptions: {
             input: files,
             output: {

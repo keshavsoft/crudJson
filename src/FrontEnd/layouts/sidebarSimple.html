@@ -1,0 +1,10 @@
+<ul class="sidebar-nav" id="sidebar-nav">
+    {% for result in sidebarItems %}
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class=""></i>
+            <span>{{result.name}}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

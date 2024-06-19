@@ -12,16 +12,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const StartFunc = () => {
-    const LocalTableNames = ReadDataSchema();
-    
+    // const LocalTableNames = ReadDataSchema();
+
     const files = GetTemplateHtmlFiles({ inRootFolder: __dirname });
 
-    let sidebarItems = BuildSideBarJson({ inFilesArray: files, inTablesArray: LocalTableNames.children });
+    // let sidebarItems = BuildSideBarJson({ inRootFolder: __dirname });
+    // console.log("a : ", files, sidebarItems, sidebarItems[0]);
+    // StartFuncCopyHtmlFiles({ inSideBarArray: sidebarItems });
+    // StartFuncCopySchema();
 
-    StartFuncCopyHtmlFiles({ inSideBarArray: sidebarItems });
-    StartFuncCopySchema();
-
-    return sidebarItems;
+    return files;
 };
 
 export { StartFunc };
