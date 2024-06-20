@@ -1,9 +1,10 @@
-import ApiConfigJson from "../../../ConfigKeys/ProjectKeys.json" assert {type: 'json'};
+import  ConfigObject  from '../../../Config.json' assert {type: 'json'};
 
 let StartFunc = async ({ inBodyData }) => {
     let jVarLocalBodyData = inBodyData;
 
-    let jVarLocalFetchUrl = `/${ApiConfigJson.ProjectName}/Api/Data/FromFolder/FromFile/Items/FromDataFolder/AggregateFuncs/OnValues/GroupBy`;
+    let jVarLocalFetchUrl = `/${ConfigObject.ProjectName}/Validate/Users/InUserDataJson/ForUserNameAndPassword/TokenToCookie`;
+
 
     let jVarLocalFetchHeaderObject = {
         method: "post",

@@ -26,5 +26,16 @@
                 "url": "ShowSimple.html"
             }
         ]
+    },
+    {
+        "name": "Delete",
+        "key": "Delete",
+        "icon": "bi bi-trash",
+        "children": [
+            {
+                "name": "Simple",
+                "url": "DeleteSimple.html"
+            }
+        ]
     }
 ]
