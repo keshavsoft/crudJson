@@ -9,12 +9,19 @@
           "RequiredTag": "required"
         },
         "Show": {
-          "title": "Account Name"
+          "title": "Customer Name"
         }
       }
     },
     "CustomerMobile": {
       "type": "NUMBER",
-      "allowNull": false
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {
+        },
+        "Show": {
+          "title": "Customer Mobile"
+        }
+      }
     }
   }

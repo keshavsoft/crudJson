@@ -7,19 +7,10 @@
     {
         "name": "Create",
         "key": "Create",
+        "icon": "bi bi-plus-circle",
         "children": [
             {
-                "name": "Simple",
-                "url": "CreateSimple.html",
-                "icon": "grid-fill"
-            },
-            {
-                "name": "CreateClientCheck",
-                "url": "CreateClientCheck.html",
-                "icon": "grid-fill"
-            },
-            {
-                "name": "CreateClientSide",
+                "name": "Insert New",
                 "url": "CreateClientSide.html",
                 "icon": "grid-fill"
             }
@@ -28,16 +19,11 @@
     {
         "name": "Show",
         "key": "Show",
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-table",
         "children": [
             {
-                "name": "Simple",
+                "name": "Show All",
                 "url": "ShowSimple.html"
-            },
-            {
-                "name": "WithColumns",
-                "url": "ShowWithColumns.html",
-                "icon": "grid-fill"
             }
         ]
     }
