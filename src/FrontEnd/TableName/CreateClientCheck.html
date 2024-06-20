@@ -22,15 +22,15 @@
                     <h5 class="card-title">General Form Elements</h5>
 
                     <!-- General Form Elements -->
-                    <form onsubmit="return false" id="FormId" novalidate>
+                    <form onsubmit="return false" id="FormId">
                         <div class="row">
                             {% for key, value in columnData %}
                             <div class="col-md-12">
-                                <label class="col-md-4 col-form-label">{{key}}</label>
+                                <label class="col-md-4 col-form-label">{{value.HtmlTags.Show.title}}</label>
 
                                 <div class="col-md-8">
                                     <input name="{{key}}" type="text" class="form-control" placeholder="Enter {{key}}"
-                                        autocomplete="off" required {{ value.HtmlTags.Create.AutoFocusTag }}>
+                                        autocomplete="off" {{ value.HtmlTags.Create.RequiredTag }} {{ value.HtmlTags.Create.AutoFocusTag }}>
                                     <div class="invalid-feedback">
                                         Should not be Empty!!
                                     </div>
@@ -53,5 +53,5 @@
 {% endblock %}
 
 {% block js %}
-<script type="module" src="../assets/static/js/pages/Create/StartFunc.js"></script>
+<script type="module" src="../assets/static/js/pages/CreateClientCheck/StartFunc.js"></script>
 {% endblock %}

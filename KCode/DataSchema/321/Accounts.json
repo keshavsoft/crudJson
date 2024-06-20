@@ -5,7 +5,11 @@
     "unique": true,
     "HtmlTags": {
       "Create": {
-        "AutoFocusTag": "autofocus"
+        "AutoFocusTag": "autofocus",
+        "RequiredTag": "required"
+      },
+      "Show": {
+        "title": "Account Name"
       }
     }
   },

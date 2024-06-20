@@ -2,11 +2,19 @@
     "CustomerName": {
       "type": "STRING",
       "allowNull": false,
-      "unique": true
+      "unique": true,
+      "HtmlTags": {
+        "Create": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
+        },
+        "Show": {
+          "title": "Account Name"
+        }
+      }
     },
     "CustomerMobile": {
       "type": "NUMBER",
-      "unique": true,
       "allowNull": false
     }
   }
