@@ -17,6 +17,11 @@
                 "name": "CreateClientCheck",
                 "url": "CreateClientCheck.html",
                 "icon": "grid-fill"
+            },
+            {
+                "name": "CreateClientSide",
+                "url": "CreateClientSide.html",
+                "icon": "grid-fill"
             }
         ]
     },

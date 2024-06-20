@@ -14,11 +14,4 @@ const StartFunc = async () => {
     return jVarLocalCollection;
 };
 
-const jFLocalTableSchema = async () => {
-    let jVarLocalResponse = await fetch(`/DataSchema/321/${jVarGlobalTableName}.json`);
-    let jVarLocalData = await jVarLocalResponse.json();
-
-    return await jVarLocalData;
-};
-
 export { StartFunc };
