@@ -5,23 +5,57 @@
         "icon": "bi bi-grid"
     },
     {
-        "name": "Create",
-        "url": "CreateClientSide.html",
-        "icon": "bi bi-plus-circle"
+        "name": "Customers",
+        "key": "Customers",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "CustomersCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "CustomersShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "CustomersDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "CustomersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
     },
     {
-        "name": "Show",
-        "url": "ShowSimple.html",
-        "icon": "bi bi-table"
-    },
-    {
-        "name": "Delete",
-        "url": "DeleteSimple.html",
-        "icon": "bi bi-trash"
-    },
-    {
-        "name": "Alter",
-        "url": "AlterSimple.html",
-        "icon": "bi bi-pencil-square"
+        "name": "ItemsFertilizers",
+        "key": "ItemsFertilizers",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "ItemsFertilizersCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "ItemsFertilizersShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "ItemsFertilizersDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "ItemsFertilizersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
     }
 ]
