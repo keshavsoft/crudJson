@@ -6,36 +6,17 @@
     },
     {
         "name": "Create",
-        "key": "Create",
-        "icon": "bi bi-plus-circle",
-        "children": [
-            {
-                "name": "Insert New",
-                "url": "CreateClientSide.html",
-                "icon": "grid-fill"
-            }
-        ]
+        "url": "CreateClientSide.html",
+        "icon": "bi bi-plus-circle"
     },
     {
         "name": "Show",
-        "key": "Show",
-        "icon": "bi bi-table",
-        "children": [
-            {
-                "name": "Show All",
-                "url": "ShowSimple.html"
-            }
-        ]
+        "url": "ShowSimple.html",
+        "icon": "bi bi-table"
     },
     {
         "name": "Delete",
-        "key": "Delete",
-        "icon": "bi bi-trash",
-        "children": [
-            {
-                "name": "Simple",
-                "url": "DeleteSimple.html"
-            }
-        ]
+        "url": "DeleteSimple.html",
+        "icon": "bi bi-trash"
     }
 ]

@@ -10,8 +10,8 @@
     {% else %}
     {% if result.children %}
     <li class="nav-item">
-        <a class="nav-link {{ '' if (result.url == filename or filename|startsWith(result.key)) else 'collapsed' }}" href="#"
-            data-bs-target="#{{result.name}}" data-bs-toggle="collapse">
+        <a class="nav-link {{ '' if (result.url == filename or filename|startsWith(result.key)) else 'collapsed' }}"
+            href="#" data-bs-target="#{{result.name}}" data-bs-toggle="collapse">
             <i class="{{ result.icon }}"></i>
             <span>{{ result.name }}</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -21,14 +21,20 @@
             data-bs-parent="#sidebar-nav">
             {% for sub in result.children %}
             <li>
-                <a class="{{ 'active' if (sub.url == filename) else '' }}"
-                    href="./{{ sub.url }}">
+                <a class="{{ 'active' if (sub.url == filename) else '' }}" href="./{{ sub.url }}">
                     <i class="bi bi-circle"></i><span>{{ sub.name }}</span>
                 </a>
             </li>
             {% endfor %}
         </ul>
         {% endif %}
+    </li>
+    {% else %}
+    <li class="nav-item">
+        <a class="nav-link {{ '' if (result.url == filename or filename|startsWith(result.key)) else 'collapsed' }}" href="./{{ result.url }}">
+            <i class="{{ result.icon }}"></i>
+            <span>{{result.name}}</span>
+        </a>
     </li>
     {% endif %}
     {% endif %}
