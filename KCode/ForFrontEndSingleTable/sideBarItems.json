@@ -34,7 +34,7 @@
     {
         "name": "ItemsFertilizers",
         "key": "ItemsFertilizers",
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-h-circle",
         "children": [
             {
                 "name": "Create New",
@@ -54,6 +54,33 @@
             {
                 "name": "Alter",
                 "url": "ItemsFertilizersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
+    },
+    {
+        "name": "ItemsPesticides",
+        "key": "ItemsPesticides",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "ItemsPesticidesCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "ItemsPesticidesShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "ItemsPesticidesDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "ItemsPesticidesAlterSimple.html",
                 "icon": "bi bi-pencil-square"
             }
         ]
