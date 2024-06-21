@@ -18,5 +18,10 @@
         "name": "Delete",
         "url": "DeleteSimple.html",
         "icon": "bi bi-trash"
+    },
+    {
+        "name": "Alter",
+        "url": "AlterSimple.html",
+        "icon": "bi bi-pencil-square"
     }
 ]
