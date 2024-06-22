@@ -2,6 +2,15 @@
     "FertItemName": {
       "type": "STRING",
       "allowNull": false,
-      "unique": true
+      "unique": true,
+      "HtmlTags": {
+        "Create": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
+        },
+        "Show": {
+          "title": "Fertilizer Item Name"
+        }
+      }
     }
   }
