@@ -6,7 +6,8 @@
       "HtmlTags": {
         "Create": {
           "AutoFocusTag": "autofocus",
-          "RequiredTag": "required"
+          "RequiredTag": "required",
+          "isRequired": true
         },
         "Show": {
           "title": "Customer Name"
@@ -17,8 +18,7 @@
       "type": "NUMBER",
       "allowNull": false,
       "HtmlTags": {
-        "Create": {
-        },
+        "Create": {},
         "Show": {
           "title": "Customer Mobile"
         }

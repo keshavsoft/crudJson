@@ -5,8 +5,8 @@
       "unique": true,
       "HtmlTags": {
         "Create": {
-          "AutoFocusTag": "autofocus",
-          "RequiredTag": "required"
+          "isAutoFocus": true,
+          "isRequired": true
         },
         "Show": {
           "title": "Fertilizer Item Name"
