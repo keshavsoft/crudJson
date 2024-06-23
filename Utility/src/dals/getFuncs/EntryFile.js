@@ -5,13 +5,14 @@ import fs from 'fs';
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-import configJson from '../../../../src/Config.json' assert { type: 'json' };
+// import configJson from '../../../../src/BackEnd/Config.json' assert { type: 'json' };
+import configJson from '../../../../bin/Config.json' assert { type: 'json' };
 
-const LocalDataPath = `../../../../${configJson.sequelizeConfig.DataPath}`;
+const LocalDataPath = `../../../../${configJson.jsonConfig.DataPath}`;
 
 let GetFunc = ({ inResponse, callback }) => {
 
-    let LocalUserPK = configJson.sequelizeConfig.DataPk;
+    let LocalUserPK = configJson.jsonConfig.DataPk;
 
     if (LocalUserPK > 0) {
         var output = fs.createWriteStream(`${LocalUserPK}.zip`);
