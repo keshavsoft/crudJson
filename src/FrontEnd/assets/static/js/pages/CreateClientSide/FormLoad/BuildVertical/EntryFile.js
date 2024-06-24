@@ -26,5 +26,4 @@ let jFLocalReturnTemplate = ({ inColumnData, inCloumnName }) => {
 
 };
 
-
 export { StartFunc };

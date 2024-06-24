@@ -1,3 +1,4 @@
 {
-    "PostUrl": "bin"
+    "PostUrl": "bin",
+    "RedirectUrl": "AlterSimple.html"
 }

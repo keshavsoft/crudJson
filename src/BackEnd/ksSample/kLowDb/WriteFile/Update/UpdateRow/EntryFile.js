@@ -17,15 +17,10 @@ let StartFunc = async ({ inDataToUpdate, inId }) => {
   let LocalarrayOfObjects = db.data;
 
   const LocalFindId = LocalarrayOfObjects.find((obj) => obj.pk == inId);
-  console.log("aaaaaaaaaaaa : ", LocalarrayOfObjects, LocalFindId);
+
   if (LocalFindId === undefined) {
     return await { KTF: false, KReason: "Id not found in data" };
   };
-
-  // LocalFindId = {
-  //   ...LocalFindId,
-  //   ...LocalDataToUpdate
-  // };
 
   LocalUpdateRow({
     inFindRow: LocalFindId,

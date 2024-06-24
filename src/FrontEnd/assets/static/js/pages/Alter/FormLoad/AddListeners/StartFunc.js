@@ -1,7 +1,7 @@
-import { StartFunc as StartFuncRefreshBSTableId } from "./UpdateButtonId/EntryFile.js";
+import { StartFunc as UpdateButtonId } from "./UpdateButtonId/EntryFile.js";
 
 let StartFunc = () => {
-    StartFuncRefreshBSTableId();
+    UpdateButtonId();
 };
 
 export { StartFunc };

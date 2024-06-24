@@ -4,14 +4,12 @@ import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/EntryFile.js";
 
 let StartFunc = async () => {
     let jVarLocalFromCheck = CheckFunc();
-    
-    if (jVarLocalFromCheck) {
-        let jVarLocalDataNeeded = await StartFuncFetchFuncs();
 
-        if (jVarLocalDataNeeded !== null) {
-            if (jVarLocalDataNeeded) {
-                StartFuncAfterFetch();
-            };
+    if (jVarLocalFromCheck) {
+        let jVarLocalResponse = await StartFuncFetchFuncs();
+
+        if (jVarLocalResponse.status === 200) {
+            StartFuncAfterFetch();
         };
     };
 };
