@@ -5,7 +5,7 @@ const StartFunc = async (row, $element, field) => {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
-            icon: "warning",
+            icon: "error",
             showCancelButton: true,
             confirmButtonColor: "#d33",
             cancelButtonColor: "grey",

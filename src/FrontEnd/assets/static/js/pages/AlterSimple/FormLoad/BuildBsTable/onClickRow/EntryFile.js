@@ -4,13 +4,13 @@ const StartFunc = async (row, $element, field) => {
     if (field === "KS-Alter") {
         let jVarLocalFromSwal = await Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: "You want to edit this row?",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#d33",
+            confirmButtonColor: "#ffcc00",
             cancelButtonColor: "grey",
             returnInputValueOnDismiss: true,
-            confirmButtonText: "Yes, delete it!",
+            confirmButtonText: "Yes, Alter it!",
             // returnFocus:false,
             reverseButtons: true,
             focusCancel: true,
