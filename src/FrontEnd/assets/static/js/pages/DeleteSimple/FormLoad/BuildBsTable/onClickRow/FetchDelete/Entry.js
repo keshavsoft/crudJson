@@ -5,14 +5,12 @@ import { StartFunc as StartFuncAfterFetch } from "./AfterFetch/EntryFile.js";
 let StartFunc = async ({ inRowPk }) => {
     let jVarLocalFromCheck = CheckFunc();
 
-    if (jVarLocalFromCheck) {
-        let jVarLocalDataNeeded = await StartFuncFetchFuncs({ inRowPk });
+    if (jVarLocalFromCheck === false) return;
+    
+    let jVarLocalFetchResponse = await StartFuncFetchFuncs({ inRowPk });
 
-        if (jVarLocalDataNeeded !== null) {
-            if (jVarLocalDataNeeded) {
-                StartFuncAfterFetch();
-            };
-        };
+    if (jVarLocalFetchResponse.status === 200) {
+        StartFuncAfterFetch();
     };
 };
 

@@ -18,29 +18,8 @@ const StartFunc = async (row, $element, field) => {
         });
 
         if (jVarLocalFromSwal.isConfirmed) {
-            console.log("row  : ", row);
             await FetchDelete({ inRowPk: row.pk });
         };
-    };
-};
-
-let jFLocalClickRowForDelete = async (inId) => {
-    let LocalRowPk = inId;
-
-    let jVarLocalFetchUrl = `/bin/Accounts/${LocalRowPk}`;
-    let LocalBodyData = {
-        method: "DELETE"
-    };
-
-    let response = await fetch(jVarLocalFetchUrl, LocalBodyData);
-
-    if (response.status === 200) {
-        var $table = $('#table');
-
-        // $table.bootstrapTable('refresh');
-        let jVarLocalHtmlId = 'RefreshBSTableId';
-        let jVarLocalRefreshBSTableId = document.getElementById(jVarLocalHtmlId);
-        jVarLocalRefreshBSTableId.click();
     };
 };
 

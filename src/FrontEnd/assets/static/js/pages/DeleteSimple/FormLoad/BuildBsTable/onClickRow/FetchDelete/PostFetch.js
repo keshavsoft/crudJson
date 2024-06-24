@@ -8,9 +8,8 @@ let StartFunc = async ({ inRowPk }) => {
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
     let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/${inRowPk}`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
-    let data = await response.json();
 
-    return await data;
+    return await response;
 };
 
 export { StartFunc };
