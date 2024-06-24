@@ -15,8 +15,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SrcFolder = "src";
+const FrontEndLastName = "TableNameSingle";
 
-const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/TableName`;
+const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/${FrontEndLastName}`;
 const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
@@ -87,7 +88,7 @@ export default defineConfig((env) => ({
         emptyOutDir: false,
         manifest: true,
         target: "chrome58",
-        outDir: resolve(__dirname, `${FrontEndDistFolder}/TableName`),
+        outDir: resolve(__dirname, `${FrontEndDistFolder}/${FrontEndLastName}`),
         rollupOptions: {
             input: files,
             output: {
