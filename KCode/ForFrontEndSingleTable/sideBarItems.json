@@ -84,5 +84,32 @@
                 "icon": "bi bi-pencil-square"
             }
         ]
+    },
+    {
+        "name": "SalesFertilizers",
+        "key": "SalesFertilizers",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "SalesFertilizersCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "SalesFertilizersShowSimpleTB.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "SalesFertilizersDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "SalesFertilizersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
     }
 ]
