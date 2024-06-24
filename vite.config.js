@@ -8,6 +8,7 @@ import ConfigJson from './bin/Config.json' with {type: 'json'};
 import { StartFunc as StartFuncGetFiles } from "./viteFuncs/getFiles.js";
 
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js";
+import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CreateHtmlFiles.js";
 
 import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
 
@@ -15,12 +16,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SrcFolder = "src";
-const FrontEndLastName = "TableNameSingle";
+const FrontEndLastName = "AllTables";
 
 const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/${FrontEndLastName}`;
 const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
+
+CreateHtmlFiles({ inToPath: root });
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
 

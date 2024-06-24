@@ -1,5 +1,5 @@
 import path from "path";
-import { StartFunc as ReadDataSchema } from "../../ReadDataSchema.js";
+import { StartFunc as ReadDataSchema } from "../ReadDataSchema.js";
 
 const StartFunc = () => {
     let LocalTableNames = ReadDataSchema();
