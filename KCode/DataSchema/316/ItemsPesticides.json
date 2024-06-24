@@ -2,6 +2,15 @@
     "PestItemName": {
       "type": "STRING",
       "allowNull": false,
-      "unique": true
+      "unique": true,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Pest Item Name"
+        }
+      }
     }
   }

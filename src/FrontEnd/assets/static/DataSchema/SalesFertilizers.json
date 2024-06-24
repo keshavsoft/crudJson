@@ -1,18 +1,50 @@
   {
     "CustomerName": {
       "type": "STRING",
-      "allowNull": true
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Customer Name"
+        }
+      }
     },
     "Aadhaar": {
       "type": "STRING",
-      "allowNull": true
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Aadhaar"
+        }
+      }
     },
     "Date": {
       "type": "STRING",
-      "allowNull": true
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+          "isRequired": true
+        },
+        "Show": {
+          "title": "Date"
+        }
+      }
     },
     "Remarks": {
       "type": "STRING",
-      "allowNull": true
+      "allowNull": true,
+      "HtmlTags": {
+        "Create": {
+        },
+        "Show": {
+          "title": "Remarks"
+        }
+      }
     }
   }
