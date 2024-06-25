@@ -6,7 +6,8 @@ import {
     PostWithKeysCheckFunc as PostWithKeysCheckFuncDal,
     PostFuncGenUuId as PostFuncGenUuIdDal, PostFilterFunc as PostFilterFuncDal,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncDal,
-    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDal
+    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncDal,
+    PostCustomPkFunc as PostCustomPkFuncDal
 } from '../../dals/postFuncs/EntryFile.js';
 
 import {
@@ -28,6 +29,17 @@ let PostFunc = async (inPostBody) => {
         return PostFuncDalsForMongoDB(inPostBody);
     };
     return PostFuncDal(inPostBody);
+};
+
+let PostCustomPkFunc = async (inPostBody) => {
+    if (ConfigJson.isSequelize) {
+        return PostFuncDalsForSequelize(inPostBody);
+    };
+
+    if (ConfigJson.isMongoDb) {
+        return PostFuncDalsForMongoDB(inPostBody);
+    };
+    return PostCustomPkFuncDal(inPostBody);
 };
 
 let PostFuncGenUuId = async (inPostBody) => {
@@ -83,5 +95,5 @@ export {
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostFilterFunc,
     PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc
+    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
 };

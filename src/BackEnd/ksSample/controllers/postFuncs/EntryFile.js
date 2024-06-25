@@ -8,7 +8,8 @@ import {
     PostWithKeysCheckFunc as PostWithKeysCheckFuncRepo,
     PostFuncGenUuId as PostFuncGenUuIdRepo,
     PostWithCheckAndGenPkFunc as PostWithCheckAndGenPkFuncRepo,
-    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncRepo
+    MultiInsertWithCheckFunc as MultiInsertWithCheckFuncRepo,
+    PostCustomPkFunc as PostCustomPkFuncRepo
 } from '../../repos/postFuncs/EntryFile.js';
 
 import {
@@ -22,6 +23,20 @@ let PostFunc = async (req, res) => {
     // let LocalModalObject = new ClassSample({ ...LocalBody });
 
     let LocalFromRepo = await PostFuncRepo({ ...LocalBody });
+
+    if (LocalFromRepo.KTF === false) {
+        res.status(500).send(LocalFromRepo.KReason);
+        return;
+    };
+
+    res.json(LocalFromRepo);
+};
+
+let PostCustomPkFunc = async (req, res) => {
+    let LocalBody = req.body;
+    // let LocalModalObject = new ClassSample({ ...LocalBody });
+
+    let LocalFromRepo = await PostCustomPkFuncRepo({ ...LocalBody });
 
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
@@ -162,5 +177,5 @@ export {
     PostUploadFunc, PostGetSelectColumnsFunc,
     PostUploadFromModalFunc, PostUploadImageFunc,
     PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId,
-    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc
+    PostWithCheckAndGenPkFunc,MultiInsertWithCheckFunc,PostCustomPkFunc
 };

@@ -3,7 +3,7 @@ import express from 'express';
 var router = express.Router();
 
 import {
-    PostFunc, PostFromModalFunc,
+    PostFunc, PostFromModalFunc,PostCustomPkFunc,
     PostUploadFunc, PostGetSelectColumnsFunc, PostUploadFromModalFunc,
     PostUploadImageFunc, PostFilterFunc, PostWithKeysCheckFunc, PostFuncGenUuId, PostWithCheckAndGenPkFunc, MultiInsertWithCheckFunc
 } from '../../controllers/postFuncs/EntryFile.js';
@@ -20,6 +20,7 @@ import { upload as uploadFromMulter } from '../../dals/postFuncs/UsingMulter.js'
 router.post('/BodyCheck', PostFuncmiddleware, PostFunc);
 router.post('/GetSelectColumns', PostGetSelectColumnsFunc);
 router.post('/', PostFunc);
+router.post('/CustomPk', PostCustomPkFunc);
 router.post('/GenUuId', PostFuncGenUuId);
 router.post('/WithKeysCheck', PostWithKeysCheckFunc);
 router.post('/WithCheckAndGenPk', PostWithCheckAndGenPkFunc);
