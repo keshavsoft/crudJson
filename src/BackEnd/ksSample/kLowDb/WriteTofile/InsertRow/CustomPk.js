@@ -1,9 +1,10 @@
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
-import Configjson from '../../../Config.json' assert { type: 'json' };
-import tableNameJson from '../../tableName.json' assert { type: 'json' };
+import Configjson from '../../../../Config.json' assert { type: 'json' };
+import tableNameJson from '../../../tableName.json' assert { type: 'json' };
 
 let StartFunc = (inPostBody) => {
+    console.log("inPostBody",inPostBody);
     let LocalinDataToInsert = inPostBody;
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
     let LocaltableName = tableNameJson.tableName;
