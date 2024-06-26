@@ -1,5 +1,4 @@
 let StartFunc = () => {
-
     if ((jFTableFooterItemNameId()) === false) {
         return false;
     };

@@ -1,4 +1,5 @@
-import { StartFunc as StartFuncForColumns } from "../../../ForColumns/EntryFile.js";
+//import { StartFunc as StartFuncForColumns } from "../../../ForColumns/EntryFile.js";
+import { StartFunc as StartFuncForColumns } from "../../../../ForColumns/EntryFile.js";
 
 const StartFunc = async () => {
     let jVarLocalData = await StartFuncForColumns();
@@ -12,7 +13,7 @@ const StartFunc = async () => {
         return { ...LocalLocalObj }
     });
 
-    console.log("LocaInputData:", LocaInputData);
+    console.log("LocaInputData:", LocaInputData);0
     return LocaInputData;
 };
 

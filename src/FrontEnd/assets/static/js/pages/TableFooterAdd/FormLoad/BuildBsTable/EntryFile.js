@@ -1,39 +1,9 @@
 import { StartFunc as StartFuncTableTag } from "./TableTag.js";
-import { StartFunc as StartFuncForColumns } from "./ForColumns/EntryFile.js";
-import { StartFunc as StartFuncForOnPostBody } from "./onPostBody.js";
+import { StartFunc as InitializeFuncs } from "./InitializeFuncs/EntryFile.js";
 
 const StartFunc = () => {
     StartFuncTableTag();
-    jFLocalInitialize().then();
+    InitializeFuncs().then();
 };
-
-const jFLocalInitialize = async () => {
-    var $table = $('#table');
-    let jVarLocalData = await StartFuncForColumns();
-    console.log("jVarLocalData:", jVarLocalData);
-    JfLocalBuildFooter({ inColumns: jVarLocalData })
-    $table.bootstrapTable({
-        data: [],
-        columns: jVarLocalData,
-        onPostBody: StartFuncForOnPostBody
-    });
-};
-
-const JfLocalBuildFooter = ({ inColumns }) => {
-    let jVarLocalFooterTrId = document.getElementById("tableFooterId");
-
-    inColumns.forEach(element => {
-        let localtd = document.createElement("td");
-        let localinput = document.createElement("input");
-        localinput.type = 'text';
-        localinput.classList.add('form-control');
-        localinput.id = element.field;
-        localinput.placeholder = 'Enter ' + element.field;
-        localtd.appendChild(localinput);
-
-        jVarLocalFooterTrId.appendChild(localtd);
-    });
-
-}
 
 export { StartFunc };

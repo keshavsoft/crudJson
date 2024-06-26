@@ -3,9 +3,9 @@ import { StartFunc as StartFuncFetchFromFuncs } from "./FetchFromFuncs/Entry.js"
 
 const StartFunc = () => {
     console.log("keshavSoft");
-    // if (StartFuncCheckFunc()) {
-    StartFuncFetchFromFuncs();
-    // };
+    if (StartFuncCheckFunc()) {
+        StartFuncFetchFromFuncs();
+    };
 };
 
-export { StartFunc }
+export { StartFunc };
