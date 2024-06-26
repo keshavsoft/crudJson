@@ -15,7 +15,7 @@
                 "icon": "bi bi-plus-circle"
             },
             {
-                "name": "Show",
+                "name": "TableFooterAdd",
                 "url": "CustomersShowSimpleTB.html",
                 "icon": "bi bi-table"
             },
