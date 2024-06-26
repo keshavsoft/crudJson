@@ -4,6 +4,7 @@ import { StartFunc as StartFuncForOnPostBody } from "./onPostBody/EntryFile.js";
 const StartFunc = async () => {
     var $table = $('#table');
     let jVarLocalColumnsData = await StartFuncForColumns();
+
     let jVarLocalColumnsForTable = [...jVarLocalColumnsData, {
         field: "KS-Options",
         title: "Options"
@@ -28,6 +29,8 @@ const jFLocalBuildFooter = ({ inColumns }) => {
         localinput.classList.add('form-control');
         localinput.name = element.field;
         localinput.placeholder = 'Enter ' + element.field;
+        localinput.autofocus = element.HtmlTags.Create.isAutoFocus;
+
         localtd.appendChild(localinput);
 
         jVarLocalFooterTrId.appendChild(localtd);
@@ -39,16 +42,9 @@ const jFLocalBuildFooter = ({ inColumns }) => {
     localButton.innerHTML = "Save";
     localButton.id = "TableFooterSaveButtonId";
 
-    // localButton.addEventListener("click", jFLocalButtonSaveClick);
-
     localtd.appendChild(localButton);
 
     jVarLocalFooterTrId.appendChild(localtd);
-};
-
-let jFLocalButtonSaveClick = () => {
-    console.log("zzzzzzzzzzz");
-
 };
 
 export { StartFunc };

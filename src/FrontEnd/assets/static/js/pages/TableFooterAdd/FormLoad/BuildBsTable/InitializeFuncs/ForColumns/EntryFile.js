@@ -7,7 +7,8 @@ const StartFunc = async () => {
     let jVarLocalCollection = jVarLocalColumns.map(element => {
         return {
             field: element,
-            title: element
+            title: element,
+            HtmlTags: jVarLocalData[element].HtmlTags
         }
     });
 
