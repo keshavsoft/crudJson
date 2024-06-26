@@ -111,5 +111,17 @@
                 "icon": "bi bi-pencil-square"
             }
         ]
+    },
+    {
+        "name": "SalesPesticides",
+        "key": "SalesPesticides",
+        "icon": "bi bi-plus-circle",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "SalesPesticidesCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
     }
 ]
