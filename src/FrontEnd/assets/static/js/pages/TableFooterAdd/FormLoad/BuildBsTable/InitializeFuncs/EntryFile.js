@@ -26,7 +26,7 @@ const jFLocalBuildFooter = ({ inColumns }) => {
         let localinput = document.createElement("input");
         localinput.type = 'text';
         localinput.classList.add('form-control');
-        localinput.id = element.field;
+        localinput.name = element.field;
         localinput.placeholder = 'Enter ' + element.field;
         localtd.appendChild(localinput);
 

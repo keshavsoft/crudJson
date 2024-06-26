@@ -2,9 +2,6 @@ import { StartFunc as StartFuncTableFooterSaveButtonId } from "./TableFooterSave
 
 const StartFunc = () => {
     StartFuncTableFooterSaveButtonId();
-
-    console.log("onPostBody:");
-
 };
 
 export { StartFunc };
