@@ -5,7 +5,8 @@
       "HtmlTags": {
         "Create": {
           "isAutoFocus": true,
-          "isRequired": true
+          "isRequired": true,
+          "title": "Customer Name"
         },
         "Show": {
           "title": "Customer Name"
