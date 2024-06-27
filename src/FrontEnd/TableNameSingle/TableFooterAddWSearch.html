@@ -46,14 +46,20 @@
 
 </table>
 <!-- <button class="btn btn-outline-success" type="button" id="TableFooterSaveButtonId">Save</button> -->
-<datalist id="ItemsDLId">
-    <option value="Keshav">
-    <option value="Sreenivas">
+
+
+{% for tableName, tableInfo in tableConfig.DataLists %}
+<datalist id="{{tableName}}">
 </datalist>
+{% endfor %}
+
 {% endblock %}
 
 {% block js %}
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    
+    <script type="module" src="../assets/static/js/Common/NiceAdmin/Header/HeaderMastersId/EntryFile.js"></script>
+
 <script type="module" src="../assets/static/js/pages/TableFooterAddWSearch/StartFunc.js"></script>
 {% endblock %}

@@ -1,5 +1,6 @@
 import ConfigJson from '../bin/Config.json' with {type: 'json'};
 import { StartFunc as ReadDataSchema } from "./ReadDataSchema.js";
+import { StartFunc as ReadTableSchema } from "./ReadTableSchema.js";
 import path from "path";
 
 const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
@@ -7,8 +8,6 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
     let LocalFiles = inFilesArray;
     let sidebarItems = inSidebarItems;
     let LocalFilteredSideBarItems = LocalFuncFilterSideBarItems({ inSidebarItems: sidebarItems });
-
-    // let LoopInsidecolumnData = LocalFuncGetColumnData();
 
     Object.keys(LocalFiles).forEach((filename) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
@@ -19,6 +18,7 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
 
         if (LoopInsideFindSideBar === undefined === false) {
             let LoopInsidecolumnData = LocalFuncGetColumnData({ inTableName: filename });
+            let LoopInsideTableConfig = LocalFuncGetTableConfig({ inTableName: filename });
 
             console.log("LoopInsidecolumnData ", filename, LoopInsidecolumnData);
             variables[filename + '.html'] = {
@@ -28,7 +28,8 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
                 isDev: mode === 'development',
                 DataPk: ConfigJson.jsonConfig.DataPk,
                 tableName: LoopInsideFindSideBar.name,
-                columnData: LoopInsidecolumnData
+                columnData: LoopInsidecolumnData,
+                tableConfig: LoopInsideTableConfig
             };
         };
     });
@@ -48,6 +49,22 @@ const LocalFuncFilterSideBarItems = ({ inSidebarItems }) => {
 
 const LocalFuncGetColumnData = ({ inTableName }) => {
     let TableSchema = ReadDataSchema();
+
+    let LoopinsideFind = TableSchema.find(element => {
+        return inTableName.startsWith(path.parse(element.name).name);
+    });
+
+    let LoopInsidecolumnData = {};
+
+    if (LoopinsideFind === undefined === false) {
+        LoopInsidecolumnData = LoopinsideFind.fileData;
+    };
+
+    return LoopInsidecolumnData;
+};
+
+const LocalFuncGetTableConfig = ({ inTableName }) => {
+    let TableSchema = ReadTableSchema();
 
     let LoopinsideFind = TableSchema.find(element => {
         return inTableName.startsWith(path.parse(element.name).name);
