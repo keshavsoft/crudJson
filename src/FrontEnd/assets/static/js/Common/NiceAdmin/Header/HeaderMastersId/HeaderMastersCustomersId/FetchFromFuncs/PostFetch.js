@@ -1,9 +1,8 @@
-// import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/EntryFile.js";
 import UrlJson from "./url.json" assert { type: "json" };
 
 let StartFunc = async () => {
     let LocalroutePath = UrlJson.PostUrl;
-    let LocaltableName = jVarGlobalTableName;
+    let LocaltableName = "Customers";
 
     // let jVarLocalFetchHeaders = StartFuncFetchHeaders();
     let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/DataOnly`;
