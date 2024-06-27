@@ -6,7 +6,7 @@ import { router as routerFromCustom } from "./Custom/routes.js";
 
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
-import packageJSON from './package.json' assert {type: 'json'};
+import packageJSON from './package.json' with {type: 'json'};
 
 import express from 'express';
 import http from 'http';
