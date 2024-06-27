@@ -125,12 +125,32 @@
     {
         "name": "SalesPesticides",
         "key": "SalesPesticides",
-        "icon": "bi bi-plus-circle",
+        "icon": " bi bi-funnel",
         "children": [
             {
                 "name": "Create New",
                 "url": "SalesPesticidesCreateClientSide.html",
                 "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "SalesPesticidesShowSimpleTB.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "SalesPesticidesDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "SalesPesticidesAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "SalesPesticidesTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
             }
         ]
     }
