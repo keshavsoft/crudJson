@@ -1,6 +1,7 @@
 import {
   PutFunc as PutFuncDal, PutToValueFunc as PutToValueFuncDal,
-  PutFromBodyFunc as PutFromBodyFuncDal
+  PutFromBodyFunc as PutFromBodyFuncDal,
+  PutToValueInArrayFunc as PutToValueInArrayDal
 } from '../../dals/putFuncs/EntryFile.js';
 
 import {
@@ -33,8 +34,16 @@ let PutToValueFunc = async ({ inDataToUpdate, inId, inKeyName }) => {
   return PutToValueFuncDal({ inDataToUpdate, inId, inKeyName });
 };
 
+let PutToValueInArrayFunc = async ({ inDataToUpdate, inId, inKeyName }) => {
+  if (ConfigJson.isSequelize) {
+    return PutFuncDalsForSequelize({ inDataToUpdate, inId });
+  };
+
+  return PutToValueInArrayDal({ inDataToUpdate, inId, inKeyName });
+};
+
 let PutFromBodyFunc = async ({ inDataToUpdate, inId }) => {
   return PutFromBodyFuncDal({ inDataToUpdate, inId });
 };
 
-export { PutFunc, PutToValueFunc, PutFromBodyFunc };
+export { PutFunc, PutToValueFunc, PutFromBodyFunc, PutToValueInArrayFunc };
