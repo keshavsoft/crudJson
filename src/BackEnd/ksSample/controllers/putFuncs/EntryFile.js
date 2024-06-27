@@ -1,5 +1,8 @@
-import { PutFunc as PutFuncRepo, PutToValueFunc as PutToValueRepo,
-  PutFromBodyFunc as PutFromBodyFuncRepo } from "../../repos/putFuncs/EntryFile.js";
+import {
+  PutFunc as PutFuncRepo, PutToValueFunc as PutToValueRepo,
+  PutFromBodyFunc as PutFromBodyFuncRepo,
+  PutToValueInArrayFunc as PutToValueInArrayRepo
+} from "../../repos/putFuncs/EntryFile.js";
 
 let PutFunc = async (req, res) => {
   let LocalDataToUpdate = req.body;
@@ -39,6 +42,26 @@ let PutToValueFunc = async (req, res) => {
   res.json(LocalFromRepo);
 };
 
+let PutToValueInArrayFunc = async (req, res) => {
+  let LocalDataToUpdate = req.body;
+
+  let LocalIfFromParam = req.params.id;
+  let LocalKeyName = req.params.KeyName;
+
+  let LocalFromRepo = await PutToValueInArrayRepo({
+    inDataToUpdate: LocalDataToUpdate,
+    inId: LocalIfFromParam,
+    inKeyName: LocalKeyName
+  });
+
+  if (LocalFromRepo.KTF === false) {
+    res.status(500).send(LocalFromRepo.KReason);
+    return;
+  };
+
+  res.json(LocalFromRepo);
+};
+
 let PutFromBodyFunc = async (req, res) => {
   let LocalDataToUpdate = req.body;
 
@@ -57,4 +80,4 @@ let PutFromBodyFunc = async (req, res) => {
   res.json(LocalFromRepo);
 };
 
-export { PutFunc, PutToValueFunc, PutFromBodyFunc };
+export { PutFunc, PutToValueFunc, PutFromBodyFunc, PutToValueInArrayFunc };
