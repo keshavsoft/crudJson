@@ -1,0 +1,9 @@
+{
+    "tableAttributes": {
+        "data-toolbar": "#ToolBarFixed",
+        "data-search": "true",
+        "data-searchable": "true",
+        "data-show-footer": "true",
+        "data-id-field": "pk"
+    }
+}

@@ -9,6 +9,14 @@
         },
         "Show": {
           "title": "Customer Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "CustomersDLId"
         }
       }
     },
@@ -40,8 +48,7 @@
       "type": "STRING",
       "allowNull": true,
       "HtmlTags": {
-        "Create": {
-        },
+        "Create": {},
         "Show": {
           "title": "Remarks"
         }

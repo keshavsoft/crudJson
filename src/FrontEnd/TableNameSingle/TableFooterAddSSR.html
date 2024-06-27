@@ -27,7 +27,18 @@
 <table id="table">
     <tfoot>
         <tr id="tableFooterId">
+            {% for ColumnName, ColumnInfo in columnData %}
+            <th>
+                <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                    {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                    {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
 
+            </th>
+            {% endfor %}
+            <th>
+                <button class="btn btn-outline-success" type="button" id="TableFooterSaveButtonId">Save</button>
+
+            </th>
         </tr>
     </tfoot>
 
@@ -40,5 +51,5 @@
 {% block js %}
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/extensions/export/bootstrap-table-export.min.js"></script>
-<script type="module" src="../assets/static/js/pages/TableFooterAdd/StartFunc.js"></script>
+<script type="module" src="../assets/static/js/pages/TableFooterAddSSR/StartFunc.js"></script>
 {% endblock %}

@@ -17,7 +17,8 @@
           "RequiredTag": "required",
           "isAutoFocus": true,
           "isRequired": true,
-          "title": "Customer Name"
+          "title": "Customer Name",
+          "ListId": "ItemsDLId"
         }
       }
     },

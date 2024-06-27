@@ -27,15 +27,29 @@
 <table id="table">
     <tfoot>
         <tr id="tableFooterId">
-            
-        
+            {% for ColumnName, ColumnInfo in columnData %}
+            <th>
+                <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                    list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                    {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                    {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+
+            </th>
+            {% endfor %}
+            <th>
+                <button class="btn btn-outline-success" type="button" id="TableFooterSaveButtonId">Save</button>
+
+            </th>
         </tr>
     </tfoot>
 
 
 </table>
 <!-- <button class="btn btn-outline-success" type="button" id="TableFooterSaveButtonId">Save</button> -->
-
+<datalist id="ItemsDLId">
+    <option value="Keshav">
+    <option value="Sreenivas">
+</datalist>
 {% endblock %}
 
 {% block js %}
