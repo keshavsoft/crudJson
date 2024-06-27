@@ -4,9 +4,8 @@ import { StartFunc as ForData } from "./ForData/EntryFile.js";
 const StartFunc = async () => {
     let jVarLocalColumns = await ForColumns();
 
-    let jVarLocalRowData = await ForData();
-    let jVarLocalColumnsAsObject = jVarLocalRowData.JsonData;
-
+    let jVarLocalColumnsAsObject = await ForData();
+    // console.log("jVarLocalColumnsAsObject : ", jVarLocalColumnsAsObject);
     // jFLocalDeleteUnWanted({ inColumnsAsObject: jVarLocalColumnsAsObject });
 
     for (const [key, value] of Object.entries(jVarLocalColumns)) {

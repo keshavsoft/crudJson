@@ -7,7 +7,9 @@
         "Create": {
           "isAutoFocus": true,
           "isRequired": true,
-          "title": "Customer Name"
+          "title": "Customer Name",
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
         },
         "Show": {
           "title": "Customer Name"

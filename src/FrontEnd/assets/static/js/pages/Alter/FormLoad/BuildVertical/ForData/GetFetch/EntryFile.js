@@ -4,7 +4,7 @@ const StartFunc = async () => {
     let LocalRowPk = getUrlQueryParams({ inGetKey: "inRowPk" });
     let jVarLocalResponse = await fetch(`/${ConfigJson.GetUrl}/${jVarGlobalTableName}/${LocalRowPk}`);
     let jVarLocalData = await jVarLocalResponse.json();
-
+    console.log("aaaaaaaa vvvvvvvvv : ", jVarLocalData);
     return await jVarLocalData;
 };
 
