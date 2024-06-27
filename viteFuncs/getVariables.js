@@ -2,6 +2,9 @@ import ConfigJson from '../bin/Config.json' with {type: 'json'};
 import { StartFunc as ReadDataSchema } from "./ReadDataSchema.js";
 import { StartFunc as ReadTableSchema } from "./ReadTableSchema.js";
 import path from "path";
+import _ from "lodash";
+
+const CommonTableSchema = ReadDataSchema();
 
 const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
     const variables = {};
@@ -20,7 +23,9 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
             let LoopInsidecolumnData = LocalFuncGetColumnData({ inTableName: filename });
             let LoopInsideTableConfig = LocalFuncGetTableConfig({ inTableName: filename });
 
-            console.log("LoopInsidecolumnData ", filename, LoopInsidecolumnData);
+            let LocalInsideForeignTable = LocalFuncGetForeignTable({ inTableName: LoopInsideFindSideBar.name });
+
+            console.log("- ", filename, LocalInsideForeignTable);
             variables[filename + '.html'] = {
                 web_title: "Mazer Admin Dashboard",
                 filename: filename + '.html',
@@ -29,7 +34,8 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
                 DataPk: ConfigJson.jsonConfig.DataPk,
                 tableName: LoopInsideFindSideBar.name,
                 columnData: LoopInsidecolumnData,
-                tableConfig: LoopInsideTableConfig
+                tableConfig: LoopInsideTableConfig,
+                foreignTablecolumnData: LocalInsideForeignTable?.fileData
             };
         };
     });
@@ -61,6 +67,20 @@ const LocalFuncGetColumnData = ({ inTableName }) => {
     };
 
     return LoopInsidecolumnData;
+};
+
+const LocalFuncGetForeignTable = ({ inTableName }) => {
+    let TableSchema = CommonTableSchema;
+
+    let LoopinsideFind = TableSchema.find(element => {
+        let k1 = _.findKey(element.fileData, o => {
+            return o?.references?.model === inTableName;
+        });
+
+        return k1 === undefined === false;
+    });
+
+    return LoopinsideFind;
 };
 
 const LocalFuncGetTableConfig = ({ inTableName }) => {

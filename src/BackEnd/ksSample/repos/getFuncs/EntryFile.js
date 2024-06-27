@@ -12,6 +12,7 @@ import {
 } from '../../dals/getFuncs/EntryFile.js';
 
 import {
+    GetIdFunc as GetIdFuncDalsForSequelize,
     GetDataOnlyFunc as GetDataOnlyFuncDalsForSequelize,
     GetRowCountFunc as GetRowCountFuncDalsForSequelize,
     GetColumnsSchemaFunc as GetColumnsSchemaFuncDalsForSequelize
@@ -40,6 +41,10 @@ let GetDataOnlyFunc = async () => {
 };
 
 let GetIdFunc = async ({ inId }) => {
+    if (ConfigJson.isSequelize) {
+        return GetIdFuncDalsForSequelize({ inId });
+    };
+
     return await GetIdFuncDal({ inId });
 };
 

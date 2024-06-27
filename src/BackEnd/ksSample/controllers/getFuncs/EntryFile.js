@@ -23,18 +23,19 @@ let GetDataOnlyFunc = async (req, res) => {
 
     res.json(LocalFromRepo);
 };
+
 let GetIdFunc = async (req, res) => {
     let LocalParams = req.params;
     let LocalIfFromParam = LocalParams.id;
 
     let LocalFromRepo = await GetIdFuncRepo({ inId: LocalIfFromParam });
-
+    console.log("aaaaaaaaaaa : ", LocalFromRepo);
     if (LocalFromRepo.KTF === false) {
         res.status(500).send(LocalFromRepo.KReason);
         return;
     };
 
-    res.json(LocalFromRepo);
+    res.json(LocalFromRepo.JsonData);
 };
 
 let GetFromModalFunc = (req, res) => {

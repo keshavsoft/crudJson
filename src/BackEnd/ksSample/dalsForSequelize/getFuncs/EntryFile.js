@@ -1,6 +1,7 @@
 import { StartFunc as StartFuncreadFile } from '../../kSequelize/ReadFileList/readFile.js';
 import { StartFunc as StartFunRowCount } from '../../kSequelize/ReadFileList/rowCount.js';
 import { AllColumns as AllColumnsFromGetTableInfo } from '../../kSequelize/modals/GetTableInfo/TableColumns.js';
+import { StartFunc as findRow } from '../../kSequelize/PullData/findRow.js';
 
 import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileList/readFileFromModal.js';
 import { StartFunc as StartFunReadFileById } from '../../kLowDb/ReadFileList/readFileById.js';
@@ -20,14 +21,10 @@ let GetDataOnlyFunc = async () => {
     return LocalFromLowDb;
 };
 
-let GetIdFunc = ({ inId }) => {
-    let LocalFromLowDb = StartFunReadFileById({ inId });
+let GetIdFunc = async ({ inId }) => {
+    let LocalFromLowDb = await findRow({ inId });
 
-    if (LocalFromLowDb === false) {
-        return false;
-    };
-
-    return LocalFromLowDb.JsonData;
+    return await LocalFromLowDb;
 };
 
 let GetFromModalFunc = () => {
@@ -65,7 +62,6 @@ let GetColumnsSchemaFunc = async () => {
 
     return LocalFromLowDb;
 };
-
 
 export {
     GetFunc, GetDataOnlyFunc, GetFromModalFunc,
