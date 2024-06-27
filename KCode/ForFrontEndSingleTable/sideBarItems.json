@@ -114,6 +114,11 @@
                 "name": "Alter",
                 "url": "SalesFertilizersAlterSimple.html",
                 "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "SalesFertilizersTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
             }
         ]
     },
