@@ -8,7 +8,7 @@
         "name": "Customers",
         "key": "Customers",
         "icon": "bi bi-people",
-         "children": [
+        "children": [
             {
                 "name": "Create New",
                 "url": "CustomersCreateClientSide.html",
@@ -39,7 +39,7 @@
     {
         "name": "ItemsFertilizers",
         "key": "ItemsFertilizers",
-        "icon": "bi bi-h-circle",
+        "icon": "bi bi-file-plus-fill",
         "children": [
             {
                 "name": "Create New",
@@ -48,7 +48,7 @@
             },
             {
                 "name": "Show",
-                "url": "ItemsFertilizersShowSimple.html",
+                "url": "ItemsFertilizersShowSimpleTB.html",
                 "icon": "bi bi-table"
             },
             {
@@ -60,6 +60,11 @@
                 "name": "Alter",
                 "url": "ItemsFertilizersAlterSimple.html",
                 "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "ItemsFertilizersTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
             }
         ]
     },
