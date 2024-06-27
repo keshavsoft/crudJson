@@ -71,7 +71,7 @@
     {
         "name": "ItemsPesticides",
         "key": "ItemsPesticides",
-        "icon": "bi bi-plus-circle",
+        "icon": "bi bi-funnel-fill",
         "children": [
             {
                 "name": "Create New",
@@ -80,7 +80,7 @@
             },
             {
                 "name": "Show",
-                "url": "ItemsPesticidesShowSimple.html",
+                "url": "ItemsPesticidesShowSimpleTB.html",
                 "icon": "bi bi-table"
             },
             {
@@ -92,6 +92,11 @@
                 "name": "Alter",
                 "url": "ItemsPesticidesAlterSimple.html",
                 "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "ItemsPesticidesTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
             }
         ]
     },
