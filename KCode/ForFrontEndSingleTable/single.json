@@ -5,8 +5,8 @@
         "icon": "bi bi-grid"
     },
     {
-        "name": "Customers",
-        "key": "Customers",
+        "name": "Create",
+        "key": "Create",
         "icon": "bi bi-people",
         "children": [
             {
@@ -25,29 +25,36 @@
                 "icon": "bi bi-plus-circle"
             },
             {
-                "name": "Show",
-                "url": "CustomersShowSimple.html",
+                "name": "ShowCreate",
+                "url": "CustomersTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
-                "name": "Delete",
-                "url": "CustomersDeleteSimple.html",
-                "icon": "bi bi-trash"
+                "name": "TableFooterAddSSR",
+                "url": "CustomersTableFooterAddSSR.html",
+                "icon": "bi bi-table"
             },
             {
-                "name": "Alter",
-                "url": "CustomersAlter.html",
-                "icon": "bi bi-pencil-square"
+                "name": "SubTableWSearch",
+                "url": "CustomersSubTableWSearch.html",
+                "icon": "bi bi-plus-circle"
             },
             {
-                "name": "AlterSSR",
-                "url": "CustomersAlterSSR.html",
-                "icon": "bi bi-pencil-square"
-            },
+                "name": "TableFooterAdd",
+                "url": "CustomersTableFooterAdd.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Show",
+        "key": "Show",
+        "icon": "bi bi-people",
+        "children": [
             {
-                "name": "AlterSimple",
-                "url": "CustomersAlterSimple.html",
-                "icon": "bi bi-pencil-square"
+                "name": "Show",
+                "url": "CustomersShowSimple.html",
+                "icon": "bi bi-table"
             },
             {
                 "name": "ShowCreate",
@@ -75,14 +82,43 @@
                 "icon": "bi bi-plus-circle"
             },
             {
-                "name": "SubTableWSearch",
-                "url": "CustomersSubTableWSearch.html",
-                "icon": "bi bi-plus-circle"
-            },
-            {
                 "name": "TableFooterAdd",
                 "url": "CustomersTableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
+            }
+        ]
+    },
+    {
+        "name": "Alter",
+        "key": "Alter",
+        "icon": "bi bi-people",
+        "children": [
+            {
+                "name": "Alter",
+                "url": "CustomersAlter.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSSR",
+                "url": "CustomersAlterSSR.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSimple",
+                "url": "CustomersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            }
+        ]
+    },
+    {
+        "name": "Delete",
+        "key": "Delete",
+        "icon": "bi bi-people",
+        "children": [
+            {
+                "name": "Delete",
+                "url": "CustomersDeleteSimple.html",
+                "icon": "bi bi-trash"
             }
         ]
     }
