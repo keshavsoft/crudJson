@@ -57,9 +57,7 @@
                         <thead>
                             <tr>
                                 {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
-                                <th>{{ColumnInfo.HtmlTags.Show.title}}</th>
-                                <th data-field="ItemName">ItemName</th>
-
+                                <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
                                 {% endfor %}
                                 <th >Options</th>
                             </tr>
