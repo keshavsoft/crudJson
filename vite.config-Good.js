@@ -10,8 +10,7 @@ import { StartFunc as StartFuncGetFiles } from "./viteFuncs/getFiles.js";
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js";
 import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CreateHtmlFiles.js";
 
-// import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
-import sideBarItemsJson from './KCode/ForFrontEndSingleTable/single.json' with {type: 'json'};
+import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
