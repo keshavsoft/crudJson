@@ -1,7 +1,7 @@
 let StartFunc = ({ inData }) => {
-    localStorage.setItem("CustomersDLId", JSON.stringify(inData));
+    localStorage.setItem("ItemsPesticidesDLId", JSON.stringify(inData));
 
-    jFLocalStartFunc({ inDataAsArray: inData, inHtmlSelectId: "CustomersDLId" })
+    jFLocalStartFunc({ inDataAsArray: inData, inHtmlSelectId: "ItemsPesticidesDLId" })
 };
 
 let jFLocalStartFunc = ({ inDataAsArray, inHtmlSelectId }) => {
