@@ -26,7 +26,8 @@
       "allowNull": true,
       "HtmlTags": {
         "Create": {
-          "isRequired": true
+          "isRequired": true,
+          "title": "Aadhaar"
         },
         "Show": {
           "title": "Aadhaar"
