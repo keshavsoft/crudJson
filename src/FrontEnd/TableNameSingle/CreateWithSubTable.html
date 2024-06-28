@@ -20,13 +20,6 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{tableName}}</h5>
-
-
-                    <!-- <div class="col-md-12">
-                        <table id="SubTableId">
-                        </table>
-                    </div>
-                     -->
                     <!-- General Form Elements -->
                     <form onsubmit="return false" id="FormId">
                         <div class="row ColumnsRow">
@@ -58,15 +51,43 @@
                     </form>
 
                     {% if foreignTablecolumnData %}
-                    <table id="SubTableId">
+                    <table id="SubTableId" data-show-footer="true">
                         <thead>
                             <tr>
                                 {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
                                 <th>{{ColumnInfo.HtmlTags.Show.title}}</th>
                                 {% endfor %}
-
+                                <th >Options</th>
                             </tr>
                         </thead>
+                        <tfoot>
+                            <tr id="tableFooterId">
+                                {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
+                                {% if ColumnInfo.type === "DATEONLY" %}
+                                <th>
+                                    <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
+                                        list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+                                </th>
+                                {% endif %}
+                                {% if ColumnInfo.type === "STRING" %}
+                                <th>
+                                    <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
+                                        list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                                        {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+                                </th>
+                               
+                                {% endif %}
+                                {% endfor %}
+                                <th>
+                                    <button class="btn btn-outline-success" type="button" id="SubTableFooterSaveButtonId">Save</button>
+                    
+                                </th>
+                            </tr>
+                        </tfoot>
+                    
                     </table>
                     {% endif %}
                 </div>

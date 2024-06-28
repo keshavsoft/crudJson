@@ -15,11 +15,7 @@
         },
         "CreateInFooter": {
           "AutoFocusTag": "autofocus",
-          "RequiredTag": "required",
-          "isAutoFocus": true,
-          "isRequired": true,
-          "title": "Customer Name",
-          "ListId": "ItemsDLId"
+             "RequiredTag": "required"
         }
       }
     }
