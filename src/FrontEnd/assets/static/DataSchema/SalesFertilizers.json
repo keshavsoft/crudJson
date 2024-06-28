@@ -34,7 +34,7 @@
       }
     },
     "Date": {
-      "type": "STRING",
+      "type": "DATEONLY",
       "allowNull": true,
       "HtmlTags": {
         "Create": {

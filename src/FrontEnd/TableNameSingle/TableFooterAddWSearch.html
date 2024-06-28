@@ -28,13 +28,23 @@
     <tfoot>
         <tr id="tableFooterId">
             {% for ColumnName, ColumnInfo in columnData %}
+            {% if ColumnInfo.type === "DATEONLY" %}
+            <th>
+                <input name="{{ColumnName}}" type="date" class="form-control" autocomplete="off"
+                    list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
+                    {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
+                    {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
+            </th>
+            {% endif %}
+            {% if ColumnInfo.type === "STRING" %}
             <th>
                 <input name="{{ColumnName}}" type="text" class="form-control" autocomplete="off"
                     list="{{ColumnInfo.HtmlTags.CreateInFooter.ListId}}"
                     {{ColumnInfo.HtmlTags.CreateInFooter.RequiredTag}}
                     {{ColumnInfo.HtmlTags.CreateInFooter.AutoFocusTag}}>
-
             </th>
+           
+            {% endif %}
             {% endfor %}
             <th>
                 <button class="btn btn-outline-success" type="button" id="TableFooterSaveButtonId">Save</button>

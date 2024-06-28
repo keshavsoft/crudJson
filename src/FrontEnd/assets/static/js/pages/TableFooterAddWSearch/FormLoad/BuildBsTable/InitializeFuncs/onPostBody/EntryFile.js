@@ -4,7 +4,6 @@ const StartFunc = () => {
     StartFuncTableFooterSaveButtonId();
 
     jFLocalSetfocus();
-
 };
 
 const jFLocalSetfocus = () => {
