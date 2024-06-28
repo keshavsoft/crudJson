@@ -5,6 +5,9 @@ bin/
 KData/
 publicDir/
 
+src/FrontEnd/AllTables
+src/FrontEnd/assets/static/DataSchema
+
 .env
 
 .vscode
