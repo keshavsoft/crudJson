@@ -23,16 +23,15 @@ const LocalFuncGetFiles = () => {
 };
 
 const StartFunc = ({ inToPath }) => {
-    let TableNamesAsArray = GetTableNamesAsArray();
+    // let TableNamesAsArray = GetTableNamesAsArray();
     let LocalHtmlFiles = LocalFuncGetFiles();
 
-    TableNamesAsArray.forEach(LoopTableName => {
-        for (const [key, value] of Object.entries(LocalHtmlFiles)) {
-            let LocalFileData = fs.readFileSync(value, "utf8");
+    for (const [key, value] of Object.entries(LocalHtmlFiles)) {
+        let LocalFileData = fs.readFileSync(value, "utf8");
 
-            fs.writeFileSync(`${inToPath}/${LoopTableName}${key}.html`, LocalFileData);
-        };
-    });
+        fs.writeFileSync(`${inToPath}/${key}.html`, LocalFileData);
+    };
+       
 };
 
 export { StartFunc }

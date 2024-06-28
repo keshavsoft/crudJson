@@ -8,7 +8,8 @@ import ConfigJson from './bin/Config.json' with {type: 'json'};
 import { StartFunc as StartFuncGetFiles } from "./viteFuncs/getFiles.js";
 
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js";
-import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CreateHtmlFiles.js";
+// import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CreateHtmlFiles.js";
+import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CopyHtmlFile.js";
 
 // import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
 import sideBarItemsJson from './KCode/ForFrontEndSingleTable/single.json' with {type: 'json'};
