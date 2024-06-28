@@ -9,6 +9,10 @@
         },
         "Show": {
           "title": "Customer Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
         }
       }
     }

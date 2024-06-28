@@ -90,7 +90,8 @@
           "title": "Refrence PK"
         },
         "CreateInFooter": {
-          "title": "Refrence PK"
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
         }
       }
     }

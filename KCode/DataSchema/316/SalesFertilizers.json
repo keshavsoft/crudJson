@@ -30,6 +30,10 @@
         },
         "Show": {
           "title": "Aadhaar"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
         }
       }
     },
