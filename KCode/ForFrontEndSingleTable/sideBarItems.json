@@ -163,5 +163,37 @@
                 "icon": "bi bi-table"
             }
         ]
+    },
+    {
+        "name": "SalesFertilizerItems",
+        "key": "SalesFertilizerItems",
+        "icon": "bi bi-people",
+        "children": [
+            {
+                "name": "Create New",
+                "url": "SalesFertilizerItemsCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "SalesFertilizerItemsShowSimpleTB.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "SalesFertilizerItemsDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "SalesFertilizerItemsAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "SalesFertilizerItemsTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
+            }
+        ]
     }
 ]
