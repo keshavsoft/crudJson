@@ -33,6 +33,11 @@
                 "name": "ShowCreate",
                 "url": "CustomersTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithSerial",
+                "url": "CustomersShowWithSerial.html",
+                "icon": "bi bi-table"
             }
         ]
     },
