@@ -24,6 +24,12 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
             let LoopInsideTableConfig = LocalFuncGetTableConfig({ inTableName: filename });
 
             let LocalInsideForeignTable = LocalFuncGetForeignTable({ inTableName: LoopInsideFindSideBar.name });
+            let LocalInsideSubTableName = "";
+
+
+            if (LocalInsideForeignTable === undefined === false) {
+                LocalInsideSubTableName = path.parse(LocalInsideForeignTable?.name)?.name;
+            };
 
             console.log("- ", filename, LocalInsideForeignTable);
             variables[filename + '.html'] = {
@@ -33,6 +39,7 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
                 isDev: mode === 'development',
                 DataPk: ConfigJson.jsonConfig.DataPk,
                 tableName: LoopInsideFindSideBar.name,
+                subTableName: LocalInsideSubTableName,
                 columnData: LoopInsidecolumnData,
                 tableConfig: LoopInsideTableConfig,
                 foreignTablecolumnData: LocalInsideForeignTable?.fileData
