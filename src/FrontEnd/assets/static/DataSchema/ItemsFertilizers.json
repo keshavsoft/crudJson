@@ -15,7 +15,8 @@
         },
         "CreateInFooter": {
           "AutoFocusTag": "autofocus",
-             "RequiredTag": "required"
+              "title": "Customer Name",
+               "RequiredTag": "required"
         }
       }
     }
