@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Menu",
+        "isTitle": true,
+        "icon": "bi bi-grid"
+    },
+    {
+        "name": "Customers",
+        "key": "Customers",
+        "icon": "bi bi-people",
+        "children": [
+            {
+                "name": "CreateSimple",
+                "url": "CustomersCreateSimple.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateClientSide",
+                "url": "CustomersCreateClientSide.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "CreateWithSubTable",
+                "url": "CustomersCreateWithSubTable.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "Show",
+                "url": "CustomersShowSimple.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "Delete",
+                "url": "CustomersDeleteSimple.html",
+                "icon": "bi bi-trash"
+            },
+            {
+                "name": "Alter",
+                "url": "CustomersAlter.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSSR",
+                "url": "CustomersAlterSSR.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "AlterSimple",
+                "url": "CustomersAlterSimple.html",
+                "icon": "bi bi-pencil-square"
+            },
+            {
+                "name": "ShowCreate",
+                "url": "CustomersTableFooterAddWSearch.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowWithSerial",
+                "url": "CustomersShowWithSerial.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "ShowSimpleTB",
+                "url": "CustomersShowSimpleTB.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "TableFooterAddSSR",
+                "url": "CustomersTableFooterAddSSR.html",
+                "icon": "bi bi-table"
+            },
+            {
+                "name": "SubTableShow",
+                "url": "CustomersSubTableShow.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "SubTableWSearch",
+                "url": "CustomersSubTableWSearch.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "TableFooterAdd",
+                "url": "CustomersTableFooterAdd.html",
+                "icon": "bi bi-plus-circle"
+            }
+        ]
+    }
+]
