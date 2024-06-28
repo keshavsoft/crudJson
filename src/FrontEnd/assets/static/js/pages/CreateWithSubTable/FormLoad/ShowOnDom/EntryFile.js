@@ -4,7 +4,7 @@ const StartFunc = async () => {
     let jVarLocalData = await ForData();
 
     jFLocalShowInInputs({ inDataAsObject: jVarLocalData });
-
+    jFBsRefereshId();
     return jVarLocalData;
 };
 
@@ -18,5 +18,11 @@ const jFLocalShowInInputs = ({ inDataAsObject }) => {
         };
     });
 };
+
+const jFBsRefereshId = () => {
+    let jVarLocalBsSubTableRefreshId = document.getElementById("BsSubTableRefreshId");
+    jVarLocalBsSubTableRefreshId.click();
+
+}
 
 export { StartFunc };

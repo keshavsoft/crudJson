@@ -51,11 +51,15 @@
                     </form>
 
                     {% if foreignTablecolumnData %}
+                    <h1><a href="#" id="BsSubTableRefreshId"></a></h1>
+
                     <table id="SubTableId" data-show-footer="true">
                         <thead>
                             <tr>
                                 {% for ColumnName, ColumnInfo in foreignTablecolumnData %}
                                 <th>{{ColumnInfo.HtmlTags.Show.title}}</th>
+                                <th data-field="ItemName">ItemName</th>
+
                                 {% endfor %}
                                 <th >Options</th>
                             </tr>
