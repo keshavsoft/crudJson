@@ -129,6 +129,11 @@
                 "name": "ShowCreate",
                 "url": "SalesFertilizersTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
+            },
+            {
+                "name": "SubTableShow",
+                "url": "SalesFertilizersSubTableShow.html",
+                "icon": "bi bi-table"
             }
         ]
     },
