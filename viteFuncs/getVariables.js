@@ -1,6 +1,10 @@
 import ConfigJson from '../bin/Config.json' with {type: 'json'};
 import { StartFunc as ReadDataSchema } from "./ReadDataSchema.js";
-import { StartFunc as ReadTableSchema } from "./ReadTableSchema.js";
+
+import { StartFunc as mainTableSchema } from "./generateVariables/mainTableSchema.js";
+import { StartFunc as mainTableColumnsConfig } from "./generateVariables/mainTableColumnsConfig.js";
+import { StartFunc as foreignTableColumnsConfig } from "./generateVariables/foreignTableColumnsConfig.js";
+
 import path from "path";
 import _ from "lodash";
 
@@ -20,18 +24,17 @@ const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
         });
 
         if (LoopInsideFindSideBar === undefined === false) {
-            let LoopInsidecolumnData = LocalFuncGetColumnData({ inTableName: filename });
-            let LoopInsideTableConfig = LocalFuncGetTableConfig({ inTableName: filename });
+            let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: filename });
+            let LoopInsideTableConfig = mainTableSchema({ inTableName: filename });
 
-            let LocalInsideForeignTable = LocalFuncGetForeignTable({ inTableName: LoopInsideFindSideBar.name });
+            let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideFindSideBar.name });
             let LocalInsideSubTableName = "";
-
 
             if (LocalInsideForeignTable === undefined === false) {
                 LocalInsideSubTableName = path.parse(LocalInsideForeignTable?.name)?.name;
             };
 
-            console.log("- ", filename, LocalInsideForeignTable);
+            // console.log("- ", filename, LocalInsideForeignTable);
             variables[filename + '.html'] = {
                 web_title: "Mazer Admin Dashboard",
                 filename: filename + '.html',
@@ -88,22 +91,6 @@ const LocalFuncGetForeignTable = ({ inTableName }) => {
     });
 
     return LoopinsideFind;
-};
-
-const LocalFuncGetTableConfig = ({ inTableName }) => {
-    let TableSchema = ReadTableSchema();
-
-    let LoopinsideFind = TableSchema.find(element => {
-        return inTableName.startsWith(path.parse(element.name).name);
-    });
-
-    let LoopInsidecolumnData = {};
-
-    if (LoopinsideFind === undefined === false) {
-        LoopInsidecolumnData = LoopinsideFind.fileData;
-    };
-
-    return LoopInsidecolumnData;
 };
 
 export { StartFunc };
