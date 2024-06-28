@@ -9,10 +9,12 @@ import { StartFunc as StartFuncGetFiles } from "./viteFuncs/getFiles.js";
 
 import { StartFunc as StartFuncGetVariables } from "./viteFuncs/getVariables.js";
 // import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CreateHtmlFiles.js";
-import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CopyHtmlFile.js";
+// import { StartFunc as CreateHtmlFiles } from "./viteFuncs/CopyHtmlFile.js";
+
+import { StartFunc as forHtmlFiles } from "./viteFuncs/forHtmlFiles.js";
 
 // import sideBarItemsJson from './KCode/ForFrontEndSingleTable/sideBarItems.json' with {type: 'json'};
-import sideBarItemsJson from './KCode/ForFrontEndSingleTable/single.json' with {type: 'json'};
+// import sideBarItemsJson from './KCode/ForFrontEndSingleTable/single.json' with {type: 'json'};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,8 +26,11 @@ const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/${FrontEndLastName}`;
 const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
+// AllTables
+// FirstTable
+const BuildType = "FirstTable";
 
-CreateHtmlFiles({ inToPath: root });
+forHtmlFiles({ inToPath: root, inBuildType: BuildType });
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
 
@@ -65,7 +70,7 @@ export default defineConfig((env) => ({
         }),
         nunjucks({
             templatesDir: root,
-            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inSidebarItems: sideBarItemsJson }),
+            variables: StartFuncGetVariables({ mode: env.mode, inFilesArray: files, inBuildType: BuildType }),
             nunjucksEnvironment: {
                 filters: {
                     containString: (str, containStr) => {

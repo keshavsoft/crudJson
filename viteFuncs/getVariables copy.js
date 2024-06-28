@@ -1,6 +1,4 @@
 import ConfigJson from '../bin/Config.json' with {type: 'json'};
-import sideBarSingleTable from '../KCode/ForFrontEndSingleTable/sideBarSingleTable.json' with {type: 'json'};
-import sideBarItemsAllTables from '../KCode/ForFrontEndSingleTable/sideBarItemsAllTables.json' with {type: 'json'};
 
 import { StartFunc as mainTableSchema } from "./generateVariables/mainTableSchema.js";
 import { StartFunc as mainTableColumnsConfig } from "./generateVariables/mainTableColumnsConfig.js";
@@ -9,10 +7,10 @@ import { StartFunc as foreignTableColumnsConfig } from "./generateVariables/fore
 import path from "path";
 import _ from "lodash";
 
-const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
+const StartFunc = ({ mode, inFilesArray, inSidebarItems }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
-    let sidebarItems = LocalFuncForSideBar({ inBuildType });
+    let sidebarItems = inSidebarItems;
     let LocalFilteredSideBarItems = LocalFuncFilterSideBarItems({ inSidebarItems: sidebarItems });
 
     Object.keys(LocalFiles).forEach((filename) => {
@@ -50,16 +48,6 @@ const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
     });
 
     return variables;
-};
-
-const LocalFuncForSideBar = ({ inBuildType }) => {
-    if (inBuildType === "FirstTable") {
-        return sideBarSingleTable;
-    };
-
-    if (inBuildType === "AllTables") {
-        return sideBarItemsAllTables;
-    };
 };
 
 const LocalFuncFilterSideBarItems = ({ inSidebarItems }) => {
