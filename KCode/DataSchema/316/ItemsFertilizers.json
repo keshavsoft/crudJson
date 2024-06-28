@@ -10,6 +10,10 @@
         },
         "Show": {
           "title": "Fertilizer Item Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
         }
       }
     }
