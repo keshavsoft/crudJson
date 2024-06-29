@@ -18,10 +18,8 @@ const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
 
         let LoopInsideTableName = path.parse(ConfigJson.jsonConfig.tableAndColumns.children[0].name).name;
-
         let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: filename });
         let LoopInsideTableConfig = mainTableSchema({ inTableName: filename });
-
         let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideTableName });
         let LocalInsideSubTableName = "";
 
@@ -54,16 +52,6 @@ const LocalFuncForSideBar = ({ inBuildType }) => {
     if (inBuildType === "AllTables") {
         return sideBarItemsAllTables;
     };
-};
-
-const LocalFuncFilterSideBarItems = ({ inSidebarItems }) => {
-    let LocalReturnArray;
-
-    LocalReturnArray = inSidebarItems.filter(element => {
-        return "children" in element;
-    });
-
-    return LocalReturnArray;
 };
 
 export { StartFunc };

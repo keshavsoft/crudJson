@@ -2,8 +2,6 @@ import fs from "fs";
 import path, { resolve } from 'path'
 import { fileURLToPath } from 'url';
 
-import { StartFunc as GetTableNamesAsArray } from "../KCode/ForFrontEndSingleTable/ReturnTableNamesAsArray.js";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -31,7 +29,7 @@ const StartFunc = ({ inToPath }) => {
 
         fs.writeFileSync(`${inToPath}/${key}.html`, LocalFileData);
     };
-       
+
 };
 
-export { StartFunc }
+export { StartFunc };

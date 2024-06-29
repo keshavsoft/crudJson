@@ -7,7 +7,6 @@ let LocalFuncReturnChildren = () => {
 
 const StartFunc = ({ inTableName }) => {
     let TableSchema = LocalFuncReturnChildren();
-
     let LoopinsideFind = TableSchema.find(element => {
         let k1 = _.findKey(element.fileData, o => {
             return o?.references?.model === inTableName;
