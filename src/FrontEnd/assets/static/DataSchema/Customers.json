@@ -1,10 +1,37 @@
   {
     "CustomerName": {
       "type": "STRING",
-      "allowNull": true
+      "allowNull": false,
+      "unique": true,
+      "HtmlTags": {
+        "Create": {
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required"
+        },
+        "Show": {
+          "title": "Customer Name"
+        },
+        "CreateInFooter": {
+          "AutoFocusTag": "autofocus",
+          "RequiredTag": "required",
+          "isAutoFocus": true,
+          "isRequired": true,
+          "title": "Customer Name",
+          "ListId": "ItemsDLId"
+        }
+      }
     },
     "CustomerMobile": {
       "type": "NUMBER",
-      "allowNull": false
+      "allowNull": false,
+      "HtmlTags": {
+        "Create": {},
+        "Show": {
+          "title": "Customer Mobile"
+        }
+      }
     }
   }
