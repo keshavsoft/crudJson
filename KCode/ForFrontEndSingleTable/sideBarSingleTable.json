@@ -90,6 +90,11 @@
                 "name": "ShowSSR",
                 "url": "ShowSSR.html",
                 "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "BulkInsert",
+                "url": "ShowBulkInsert.html",
+                "icon": "bi bi-plus-circle"
             }
         ]
     },
