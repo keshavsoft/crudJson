@@ -11,8 +11,8 @@ const jFLocalInitialize = async () => {
     let jVarLocalData = await StartFuncForColumns();
 
     $table.bootstrapTable({
-        data: [],
-        columns:jVarLocalData
+        data: []
+        // columns:jVarLocalData
     });
 };
 
