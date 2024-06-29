@@ -58,32 +58,32 @@
             },
             {
                 "name": "ShowCreate",
-                "url": "CustomersTableFooterAddWSearch.html",
+                "url": "TableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "ShowWithSerial",
-                "url": "CustomersShowWithSerial.html",
+                "url": "ShowWithSerial.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "ShowSimpleTB",
-                "url": "CustomersShowSimpleTB.html",
+                "url": "ShowSimpleTB.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "TableFooterAddSSR",
-                "url": "CustomersTableFooterAddSSR.html",
+                "url": "TableFooterAddSSR.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "SubTableShow",
-                "url": "CustomersSubTableShow.html",
+                "url": "SubTableShow.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "TableFooterAdd",
-                "url": "CustomersTableFooterAdd.html",
+                "url": "TableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
             }
         ]
