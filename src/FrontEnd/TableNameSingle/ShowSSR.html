@@ -22,7 +22,7 @@
     <thead>
         <tr>
             {% for ColumnName, ColumnInfo in columnData %}
-            <th>{{ColumnInfo.HtmlTags.Show.title}}</th>
+            <th data-field="{{ColumnName}}">{{ColumnInfo.HtmlTags.Show.title}}</th>
             {% endfor %}
 
         </tr>

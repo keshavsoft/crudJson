@@ -18,7 +18,7 @@ const StartFunc = ({ mode, inFilesArray, inBuildType }) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
 
         let LoopInsideTableName = path.parse(ConfigJson.jsonConfig.tableAndColumns.children[0].name).name;
-        let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: filename });
+        let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
         let LoopInsideTableConfig = mainTableSchema({ inTableName: filename });
         let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideTableName });
         let LocalInsideSubTableName = "";
