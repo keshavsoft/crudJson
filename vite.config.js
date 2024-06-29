@@ -28,7 +28,7 @@ const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
 // AllTables
 // FirstTable
-const BuildType = "AllTables";
+const BuildType = "FirstTable";
 
 forHtmlFiles({ inToPath: root, inBuildType: BuildType });
 
