@@ -1,7 +1,7 @@
 import UrlJson from './url.json' with {type: 'json'};
 
 let StartFunc = () => {
-    window.location.href = `${jVarGlobalTableName}${UrlJson.RedirectToUrl}`;
+    window.location.href = `${UrlJson.RedirectToUrl}`;
 };
 
 export { StartFunc }
