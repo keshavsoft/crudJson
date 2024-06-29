@@ -2,7 +2,7 @@
     {
         "name": "Customers",
         "isTitle": true,
-        "icon": "bi bi-grid"
+        "icon": "bi bi-people"
     },
     {
         "name": "Create",
@@ -53,7 +53,7 @@
         "children": [
             {
                 "name": "Show",
-                "url": "CustomersShowSimple.html",
+                "url": "ShowSimple.html",
                 "icon": "bi bi-table"
             },
             {
