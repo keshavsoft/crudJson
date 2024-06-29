@@ -1,13 +1,17 @@
   {
-    "OrderDate": {
+    "ItemName": {
       "type": "STRING",
       "allowNull": true
     },
-    "CustomerName": {
+    "ItemRate": {
       "type": "NUMBER",
       "allowNull": false
     },
-    "CustomerMobile": {
+    "Qty": {
+      "type": "NUMBER",
+      "allowNull": false
+    },
+    "GRate": {
       "type": "NUMBER",
       "allowNull": false
     }
