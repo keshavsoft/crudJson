@@ -7,7 +7,7 @@ import { StartFunc as GetTableNamesAsArray } from "../KCode/ForFrontEndSingleTab
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CommonFromFolder = resolve(__dirname, "../src/FrontEnd/TableNameSingle");
+const CommonFromFolder = resolve(__dirname, "../src/FrontEnd/HtmlsForAllTables");
 
 const LocalFuncGetFiles = () => {
     const root = CommonFromFolder;
