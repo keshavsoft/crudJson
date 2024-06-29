@@ -85,6 +85,11 @@
                 "name": "TableFooterAdd",
                 "url": "TableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowSSR",
+                "url": "ShowSSR.html",
+                "icon": "bi bi-plus-circle"
             }
         ]
     },
