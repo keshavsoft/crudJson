@@ -58,7 +58,7 @@
             },
             {
                 "name": "ShowCreate",
-                "url": "TableFooterAddWSearch.html",
+                "url": "ShowTableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
