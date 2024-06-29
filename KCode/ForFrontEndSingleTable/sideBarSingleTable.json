@@ -95,17 +95,17 @@
         "children": [
             {
                 "name": "Alter",
-                "url": "CustomersAlter.html",
+                "url": "Alter.html",
                 "icon": "bi bi-pencil-square"
             },
             {
                 "name": "AlterSSR",
-                "url": "CustomersAlterSSR.html",
+                "url": "AlterSSR.html",
                 "icon": "bi bi-pencil-square"
             },
             {
                 "name": "AlterSimple",
-                "url": "CustomersAlterSimple.html",
+                "url": "AlterSimple.html",
                 "icon": "bi bi-pencil-square"
             }
         ]
@@ -117,7 +117,7 @@
         "children": [
             {
                 "name": "Delete",
-                "url": "CustomersDeleteSimple.html",
+                "url": "DeleteSimple.html",
                 "icon": "bi bi-trash"
             }
         ]
