@@ -11,37 +11,37 @@
         "children": [
             {
                 "name": "CreateSimple",
-                "url": "CustomersCreateSimple.html",
+                "url": "CreateSimple.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "CreateClientSide",
-                "url": "CustomersCreateClientSide.html",
+                "url": "CreateClientSide.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "CreateWithSubTable",
-                "url": "CustomersCreateWithSubTable.html",
+                "url": "CreateWithSubTable.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "ShowCreate",
-                "url": "CustomersTableFooterAddWSearch.html",
+                "url": "TableFooterAddWSearch.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "TableFooterAddSSR",
-                "url": "CustomersTableFooterAddSSR.html",
+                "url": "TableFooterAddSSR.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "SubTableWSearch",
-                "url": "CustomersSubTableWSearch.html",
+                "url": "SubTableWSearch.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "TableFooterAdd",
-                "url": "CustomersTableFooterAdd.html",
+                "url": "TableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
             }
         ]
@@ -95,17 +95,17 @@
         "children": [
             {
                 "name": "Alter",
-                "url": "CustomersAlter.html",
+                "url": "Alter.html",
                 "icon": "bi bi-pencil-square"
             },
             {
                 "name": "AlterSSR",
-                "url": "CustomersAlterSSR.html",
+                "url": "AlterSSR.html",
                 "icon": "bi bi-pencil-square"
             },
             {
                 "name": "AlterSimple",
-                "url": "CustomersAlterSimple.html",
+                "url": "AlterSimple.html",
                 "icon": "bi bi-pencil-square"
             }
         ]
@@ -117,7 +117,7 @@
         "children": [
             {
                 "name": "Delete",
-                "url": "CustomersDeleteSimple.html",
+                "url": "DeleteSimple.html",
                 "icon": "bi bi-trash"
             }
         ]
