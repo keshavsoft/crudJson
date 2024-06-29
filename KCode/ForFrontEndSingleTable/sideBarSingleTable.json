@@ -73,17 +73,17 @@
             },
             {
                 "name": "TableFooterAddSSR",
-                "url": "TableFooterAddSSR.html",
+                "url": "ShowTableFooterAddSSR.html",
                 "icon": "bi bi-table"
             },
             {
                 "name": "SubTableShow",
-                "url": "SubTableShow.html",
+                "url": "ShowSubTableShow.html",
                 "icon": "bi bi-plus-circle"
             },
             {
                 "name": "TableFooterAdd",
-                "url": "TableFooterAdd.html",
+                "url": "ShowTableFooterAdd.html",
                 "icon": "bi bi-plus-circle"
             },
             {
