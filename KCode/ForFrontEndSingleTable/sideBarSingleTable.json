@@ -67,6 +67,11 @@
                 "icon": "bi bi-table"
             },
             {
+                "name": "ShowSerialPage",
+                "url": "ShowSerialPage.html",
+                "icon": "bi bi-table"
+            },
+            {
                 "name": "ShowSimpleTB",
                 "url": "ShowSimpleTB.html",
                 "icon": "bi bi-table"
@@ -89,6 +94,11 @@
             {
                 "name": "ShowSSR",
                 "url": "ShowSSR.html",
+                "icon": "bi bi-plus-circle"
+            },
+            {
+                "name": "ShowSSRSerialPage",
+                "url": "ShowSSRSerialPage.html",
                 "icon": "bi bi-plus-circle"
             },
             {

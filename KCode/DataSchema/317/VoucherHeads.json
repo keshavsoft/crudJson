@@ -1,0 +1,16 @@
+  {
+    "ParentVoucherName": {
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "Parent Voucher Name"
+        }
+      }
+    },
+    "VoucherName": {
+      "type": "STRING"
+    },
+    "VoucheVoucherNumberrName": {
+      "type": "INTEGER"
+    }
+  }

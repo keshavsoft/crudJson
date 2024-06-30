@@ -1,4 +1,3 @@
-import fs from "fs";
 import { defineConfig, normalizePath, build } from 'vite'
 import path, { resolve } from 'path'
 import { fileURLToPath } from 'url';
@@ -6,10 +5,8 @@ import nunjucks from 'vite-plugin-nunjucks';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import ConfigJson from './bin/Config.json' with {type: 'json'};
 
-import { StartFunc as StartFuncGetFiles } from "./viteFuncs/AllTables/getFiles.js";
-import { StartFunc as StartFuncGetVariables } from "./viteFuncs/AllTables/getVariables.js";
-
-import { StartFunc as forHtmlFiles } from "./viteFuncs/forHtmlFiles.js";
+import { StartFunc as StartFuncGetFiles } from "./viteFuncs/FirstTable/getFiles.js";
+import { StartFunc as StartFuncGetVariables } from "./viteFuncs/FirstTable/getVariables.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,22 +16,14 @@ const SrcFolder = "src";
 // AllTables
 // FirstTable
 // <your table Name>
-const BuildType = "AllTables";
+const BuildType = "FirstTable";
 
 const FrontEndLastName = BuildType;
 
-const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/${FrontEndLastName}`;
-
-if (fs.existsSync(FrontEndSrcFolder) === false) {
-    fs.mkdirSync(FrontEndSrcFolder);
-    console.log(`created folder : ${FrontEndSrcFolder}`);
-};
-
+const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/TableNameSingle`;
 const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
-
-forHtmlFiles({ inToPath: root, inBuildType: BuildType });
 
 let files = StartFuncGetFiles({ inRootFolder: FrontEndSrcFolder });
 
