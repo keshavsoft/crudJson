@@ -6,6 +6,7 @@ import nunjucks from 'vite-plugin-nunjucks'
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const srcFolder = "src-mazer";
+const distFolder = "publicDir/crud";
 
 import sidebarItems from "./src-mazer/sidebar-items.json";
 import horizontalMenuItems from "./src-mazer/horizontal-menu-items.json";
@@ -82,7 +83,7 @@ const modulesToCopy = {
 const copyModules = Object.keys(modulesToCopy).map(moduleName => {
     const withDist = modulesToCopy[moduleName]
     return {
-        src: normalizePath(resolve(__dirname, `./node_modules/${moduleName}${withDist ? '/dist' : ''}`)),
+        src: normalizePath(resolve(__dirname, `./node_modules/${moduleName}${withDist ? `/${distFolder}` : ''}`)),
         dest: 'assets/extensions',
         rename: moduleName
     }
@@ -92,12 +93,12 @@ build({
     configFile: false,
     build: {
         emptyOutDir: false,
-        outDir: resolve(__dirname, 'dist/assets/compiled/js'),
+        outDir: resolve(__dirname, `${distFolder}/assets/compiled/js`),
         lib: {
             name: 'app',
             formats: ['umd'],
             fileName: 'app',
-            entry: "./src-mazer/assets/js/app.js",
+            entry: `./${srcFolder}/assets/js/app.js`,
         },
         rollupOptions: {
             output: {
@@ -117,7 +118,7 @@ export default defineConfig((env) => ({
         viteStaticCopy({
             targets: [
                 { src: normalizePath(resolve(__dirname, `./${srcFolder}/assets/static`)), dest: 'assets' },
-                { src: normalizePath(resolve(__dirname, './dist/assets/compiled/fonts')), dest: 'assets/compiled/css' },
+                { src: normalizePath(resolve(__dirname, `./${distFolder}/assets/compiled/fonts`)), dest: 'assets/compiled/css' },
                 { src: normalizePath(resolve(__dirname, "./node_modules/bootstrap-icons/bootstrap-icons.svg")), dest: 'assets/static/images' },
                 ...copyModules
             ],
@@ -156,7 +157,7 @@ export default defineConfig((env) => ({
         emptyOutDir: false,
         manifest: true,
         target: "chrome58",
-        outDir: resolve(__dirname, 'dist'),
+        outDir: resolve(__dirname, distFolder),
         rollupOptions: {
             input: files,
             output: {

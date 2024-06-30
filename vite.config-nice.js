@@ -20,16 +20,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SrcFolder = "src";
-const FrontEndLastName = "AllTables";
+
+// AllTables
+// FirstTable
+// <your table Name>
+const BuildType = "FirstTable";
+
+const FrontEndLastName = BuildType;
 
 const FrontEndSrcFolder = `${SrcFolder}/FrontEnd/${FrontEndLastName}`;
 const FrontEndDistFolder = `publicDir/bin/${ConfigJson.jsonConfig.DataPk}`;
 
 const root = resolve(__dirname, `${FrontEndSrcFolder}`);
-// AllTables
-// FirstTable
-// <your table Name>
-const BuildType = "FirstTable";
 
 forHtmlFiles({ inToPath: root, inBuildType: BuildType });
 

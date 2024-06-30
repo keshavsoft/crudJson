@@ -7,5 +7,15 @@
     "name": "Dashboard",
     "url": "index.html",
     "icon": "grid-fill"
+  },
+  {
+    "name": "FirstTable",
+    "url": "../bin/316/FirstTable/ShowSimple.html",
+    "icon": "grid-fill"
+  },
+  {
+    "name": "AllTables",
+    "url": "../bin/316/AllTables/ShowSimple.html",
+    "icon": "grid-fill"
   }
 ]
