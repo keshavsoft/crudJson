@@ -8,7 +8,7 @@ import { StartFunc as foreignTableColumnsConfig } from "../foreignTableColumnsCo
 import path from "path";
 import _ from "lodash";
 
-const StartFunc = ({ mode, inFilesArray }) => {
+const StartFunc = ({ mode, inFilesArray, inTableName }) => {
     const variables = {};
     let LocalFiles = inFilesArray;
     let sidebarItems = sideBarSingleTable;
@@ -16,7 +16,7 @@ const StartFunc = ({ mode, inFilesArray }) => {
     Object.keys(LocalFiles).forEach((filename) => {
         if (filename.includes('layouts/FrontEnd')) filename = `layouts/FrontEnd/${filename}`
 
-        let LoopInsideTableName = path.parse(ConfigJson.jsonConfig.tableAndColumns.children[0].name).name;
+        let LoopInsideTableName = inTableName;
         let LoopInsidecolumnData = mainTableColumnsConfig({ inTableName: LoopInsideTableName });
         let LoopInsideTableConfig = mainTableSchema({ inTableName: filename });
         let LocalInsideForeignTable = foreignTableColumnsConfig({ inTableName: LoopInsideTableName });
