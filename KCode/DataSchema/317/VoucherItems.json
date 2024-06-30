@@ -1,0 +1,10 @@
+{
+    "ItemCode": {
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "Item Code"
+        }
+      }
+    }
+}
