@@ -9,8 +9,9 @@ let StartFunc = async ({ inFromFetch }) => {
 };
 
 let jFLocalToURL = () => {
-    // window.location = "../VoucherShow/ShowAll.html?FromSave=true";
-    window.location.href = "";
+    const url = new URL(window.location.href);
+    url.searchParams.append('FromSave', true);
+    window.location.href = url.href;
 };
 
 export { StartFunc };

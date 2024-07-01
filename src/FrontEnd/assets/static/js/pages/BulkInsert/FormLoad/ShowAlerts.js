@@ -1,36 +1,15 @@
 const StartFunc = () => {
-    jFLocalForConfig();
-    jFLocalForData();
+    jFLocalForFromSave();
 };
 
-const jFLocalForConfig = () => {
-    let jVarLocalFolderCreated = getUrlQueryParams({ inGetKey: "NewFolderName" });
+const jFLocalForFromSave = () => {
+    let jVarLocalForFromSave = getUrlQueryParams({ inGetKey: "FromSave" });
 
-    let jVarLocalForConfig = getUrlQueryParams({ inGetKey: "ConfigFolderCreated" });
-
-    if (jVarLocalForConfig === null) {
-        const alert = bootstrap.Alert.getOrCreateInstance('#ConfigFolderInsertSuccessId');
+    if (jVarLocalForFromSave === null) {
+        const alert = bootstrap.Alert.getOrCreateInstance('#FromSaveId');
         alert.close();
-    } else {
-        let jVarLocalConfigFolderInsertSuccessStrongId = document.getElementById("ConfigFolderInsertSuccessStrongId");
-        jVarLocalConfigFolderInsertSuccessStrongId.innerHTML = jVarLocalFolderCreated;
     };
 };
-
-const jFLocalForData = () => {
-    let jVarLocalFolderCreated = getUrlQueryParams({ inGetKey: "NewFolderName" });
-    let jVarLocalForData = getUrlQueryParams({ inGetKey: "DataFolderCreated" });
-
-    if (jVarLocalForData === null) {
-        const alert = bootstrap.Alert.getOrCreateInstance('#DataFolderInsertSuccessId');
-        alert.close();
-    } else {
-        let jVarLocalConfigFolderInsertSuccessStrongId = document.getElementById("DataFolderInsertSuccessStrongId");
-        jVarLocalConfigFolderInsertSuccessStrongId.innerHTML = jVarLocalFolderCreated;
-    };
-
-};
-
 let getUrlQueryParams = ({ inGetKey }) => {
     const queryString = window.location.search;
     const parameters = new URLSearchParams(queryString);
