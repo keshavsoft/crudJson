@@ -1,0 +1,10 @@
+  {
+    "LedgerName": {
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "Ledger Name"
+        }
+      }
+    }
+  }
