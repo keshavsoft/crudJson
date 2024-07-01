@@ -8,37 +8,94 @@
       }
     },
     "VoucherName": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "Voucher Name"
+        }
+      }
     },
     "VoucherNumber": {
-      "type": "INTEGER"
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "Voucher Number"
+        }
+      }
     },
     "Date": {
-      "type":"DATE"
+      "type":"DATE",
+      "HtmlTags": {
+        "Show": {
+          "title": "Date"
+        }
+      }
     },
     "HeadAccCode": {
-      "type": "INTEGER"
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "HeadAccCode"
+        }
+      }
     },
+      
+    
     "nam1": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam1"
+        }
+      }
     },
     "nam2": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam2"
+        }
+      }
     },
     "nam3": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam3"
+        }
+      }
     },
     "nam4": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam4"
+        }
+      }
     },
     "nam6": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam6"
+        }
+      }
     },
     "nam7": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "nam7"
+        }
+      }
     },
     "HeadAccountName": {
-      "type": "STRING"
+      "type": "STRING",
+      "HtmlTags": {
+        "Show": {
+          "title": "HeadAccountName"
+        }
+      }
     }
     
   }
