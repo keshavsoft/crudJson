@@ -10,7 +10,36 @@
     "VoucherName": {
       "type": "STRING"
     },
-    "VoucheVoucherNumberrName": {
+    "VoucherNumber": {
       "type": "INTEGER"
+    },
+    "Date": {
+      "type":"DATE"
+    },
+    "HeadAccCode": {
+      "type": "INTEGER"
+    },
+    "nam1": {
+      "type": "STRING"
+    },
+    "nam2": {
+      "type": "STRING"
+    },
+    "nam3": {
+      "type": "STRING"
+    },
+    "nam4": {
+      "type": "STRING"
+    },
+    "nam6": {
+      "type": "STRING"
+    },
+    "nam7": {
+      "type": "STRING"
+    },
+    "HeadAccountName": {
+      "type": "STRING"
     }
+    
   }
+  
