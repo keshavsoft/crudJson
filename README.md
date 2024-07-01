@@ -258,5 +258,7 @@ limitations
 for developers
 
 backend : bin
+
 database : KData
+
 frontend : publicDir/bin
