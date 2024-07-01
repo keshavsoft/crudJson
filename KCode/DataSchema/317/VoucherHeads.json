@@ -3,7 +3,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "Parent Voucher Name"
+          "title": "Parent Voucher Name",
+          "Create": {
+            "title": "Parent Voucher Name"
+          }
         }
       }
     },
@@ -11,7 +14,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "Voucher Name"
+          "title": "Voucher Name",
+          "Create": {
+            "title": "Voucher Name"
+          }
         }
       }
     },
@@ -19,7 +25,10 @@
       "type": "INTEGER",
       "HtmlTags": {
         "Show": {
-          "title": "Voucher Number"
+          "title": "Voucher Number",
+          "Create": {
+            "title": "Voucher Number"
+          }
         }
       }
     },
@@ -27,7 +36,11 @@
       "type":"DATE",
       "HtmlTags": {
         "Show": {
-          "title": "Date"
+          "title": "Date",
+          "Create": {
+            "title": "Date"
+          }
+          
         }
       }
     },
@@ -35,7 +48,10 @@
       "type": "INTEGER",
       "HtmlTags": {
         "Show": {
-          "title": "HeadAccCode"
+          "title": "HeadAccCode",
+          "Create": {
+            "title": "HeadAccCode"
+          }
         }
       }
     },
@@ -45,7 +61,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam1"
+          "title": "nam1",
+          "Create": {
+            "title": "nam1"
+          }
         }
       }
     },
@@ -53,7 +72,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam2"
+          "title": "nam2",
+          "Create": {
+            "title": "nam2"
+          }
         }
       }
     },
@@ -61,7 +83,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam3"
+          "title": "nam3",
+          "Create": {
+            "title": "nam3"
+          }
         }
       }
     },
@@ -69,7 +94,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam4"
+          "title": "nam4",
+          "Create": {
+            "title": "nam4"
+          }
         }
       }
     },
@@ -77,7 +105,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam6"
+          "title": "nam6",
+          "Create": {
+            "title": "nam6"
+          }
         }
       }
     },
@@ -85,7 +116,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "nam7"
+          "title": "nam7",
+          "Create": {
+            "title": "nam7"
+          }
         }
       }
     },
@@ -93,7 +127,10 @@
       "type": "STRING",
       "HtmlTags": {
         "Show": {
-          "title": "HeadAccountName"
+          "title": "HeadAccountName",
+          "Create": {
+            "title": "Head Account Name"
+          }
         }
       }
     }
