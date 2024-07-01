@@ -254,3 +254,9 @@ https://github.com/zuramai/mazer
 limitations
 
 1. never use - for any names
+
+for developers
+
+backend : bin
+database : KData
+frontend : publicDir/bin
