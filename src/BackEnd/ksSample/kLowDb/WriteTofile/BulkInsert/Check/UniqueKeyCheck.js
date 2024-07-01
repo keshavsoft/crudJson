@@ -25,6 +25,9 @@ const StartFunc = ({ inData, inDataToInsert, inTableSchema }) => {
         return LocalReturnData;
     };
 
+    LocalReturnData.KTF = true;
+    LocalReturnData.JsonData = inDataToInsert;
+
     return LocalReturnData;
 };
 
