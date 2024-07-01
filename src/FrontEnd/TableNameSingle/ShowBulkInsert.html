@@ -3,6 +3,12 @@
 {% extends 'src/FrontEnd/layouts/master.html' %}
 
 {% block content %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert" id="FromSaveId">
+    <strong id="RecordsCountId">1</strong> <strong>Uploaded sucessfully ..</strong> You should check in on some of those
+    fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="pagetitle">
     <h1> <a id="RefreshBSTableId">Customers</a> </h1>
     <nav>
@@ -28,10 +34,7 @@
         </button>
     </div>
 </div>
-<div class="alert alert-primary alert-dismissible fade show" role="alert" id="FromSaveId">
-    <strong>Uploaded sucessfully ..</strong> You should check in on some of those fields below.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+
 <div class="spinner-border" id="SpinnerId" role="status" style="display: none;">
     <span class="visually-hidden">Loading...</span>
 </div>

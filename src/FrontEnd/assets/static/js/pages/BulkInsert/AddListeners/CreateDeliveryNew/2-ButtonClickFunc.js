@@ -11,7 +11,7 @@ let StartFunc = async () => {
       inBodyData: jVarLocalBodyData,
     });
 
-    await StartFuncAfterFetch({ inFromFetch: response });
+    await StartFuncAfterFetch({ inFromFetch: response, inBodyData: jVarLocalBodyData, });
   }
 }
 
