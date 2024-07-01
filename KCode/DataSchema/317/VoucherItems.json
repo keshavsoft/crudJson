@@ -6,5 +6,31 @@
           "title": "Item Code"
         }
       }
-    }
-}
+    },
+    "RefPK": {
+      "type": "INTEGER"
+     },
+    "id": {
+      "type": "INTEGER"
+     },
+     
+     "ItemName": {
+       "type": "STRING"
+     },
+     "BatchRefPk": {
+       "type": "STRING"
+     },
+     "BatchNumber": {
+       "type": "STRING"
+     },
+     "sno": {
+       "type": "INTEGER"
+     },
+     "Qty": {
+       "type": "INTEGER"
+     },
+     "Amount": {
+       "type": "INTEGER"
+     }
+    
+  }
