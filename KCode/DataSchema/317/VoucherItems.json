@@ -8,29 +8,70 @@
       }
     },
     "RefPK": {
-      "type": "INTEGER"
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "RefPK"
+        }
+      }
+       
      },
     "id": {
-      "type": "INTEGER"
+      "type": "INTEGER",
+      "HtmlTags": {
+        "Show": {
+          "title": "id"
+        }
+      }
      },
      
      "ItemName": {
-       "type": "STRING"
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "ItemName"
+        }
+      }
      },
      "BatchRefPk": {
-       "type": "STRING"
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "BatchRefPK"
+        }
+      }
      },
      "BatchNumber": {
-       "type": "STRING"
+       "type": "STRING",
+       "HtmlTags": {
+        "Show": {
+          "title": "BatchNumber"
+        }
+      }
      },
      "sno": {
-       "type": "INTEGER"
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "sno"
+        }
+      }
      },
      "Qty": {
-       "type": "INTEGER"
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "Qty"
+        }
+      }
      },
      "Amount": {
-       "type": "INTEGER"
+       "type": "INTEGER",
+       "HtmlTags": {
+        "Show": {
+          "title": "Amount"
+        }
+      }
      }
     
   }
